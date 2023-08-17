@@ -1,6 +1,6 @@
 # Internal manual for ThreeFold Cloud
 
-> see [https://despiegk.github.io/book_earth_regenerator/intro/intro_readme.html](https://ourworldfreezone.github.io/info_freezone/intro/intro_readme.html)
+> see [https://threefoldfoundation.github.io/info_cloud_production/](https://threefoldfoundation.github.io/info_cloud_production/intro/intro.html)
 
 ## To Develop 
 
