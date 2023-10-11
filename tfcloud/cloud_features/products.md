@@ -1,10 +1,6 @@
 
 ## Planned Products
 
-Planned workloads for ThreeFold Cloud?
-
-infrastructure for users to deploy their own blockchain solutions seamlessly.
-
 ## Q1 2024
 
 * Mycelium - Become a Publisher on our New Internet:
@@ -16,6 +12,7 @@ infrastructure for users to deploy their own blockchain solutions seamlessly.
     * important: is for the early adoptor, and technical IT knowledge will be required
     * 3Bot is designed to be your digital right hand. It can manage a range of tasks, from sending emails and overseeing your calendar to handling chats and financial transactions
     * With 3Bot, deploying solutions on the cloud becomes a breeze. Whether it's setting up a new website or launching a specific application, 3Bot streamlines the process, ensuring efficiency and reliability.
+    * Learn how to develop using a 3Bot to create your own solutions running on the TFGrid.
 
 ## Q2 2024
 
