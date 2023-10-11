@@ -3,6 +3,8 @@
 
 # Mycelium: A Platform for Conscious Decentralization
 
+> Mycelium runs on top of the TFGrid which is opensource Internet Infrastructure platform.
+
 Mycelium is a Internet Platform designed to become smarter and more creative together and expand collective consciousness. Built on proven technologies, Mycelium allows peer-to-peer networks to flourish without centralized intermediaries.
 
 Mycelium has no central point of control. The voluntary nodes forming the Mycelium network are operated by individuals and communities who share resources and capabilities to manifest a common vision. This structure aligns with principles of decentralization and autonomy.
