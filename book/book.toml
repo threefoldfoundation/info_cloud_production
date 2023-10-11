@@ -10,7 +10,7 @@ no-section-label = true
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
 
 [output.html.print]
-enable = false
+enable = true
 
 [preprocessor]
 

@@ -1,0 +1,690 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>ThreeFold Cloud Internal</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="tfcloud/intro/intro.html">Intro</a></li><li class="chapter-item "><a href="tfcloud/community/collaboration.html">Collaboration</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tfcloud/community/code_conduct.html">Code of Conduct</a></li><li class="chapter-item "><a href="tfcloud/community/community_tools.html">Community Tools</a></li></ol></li><li class="chapter-item "><a href="tfcloud/cloud_features/products.html">Products</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tfcloud/cloud_features/features.html">Features</a></li><li class="chapter-item "><a href="tfcloud/cloud_features/values.html">values</a></li><li class="chapter-item "><a href="tfcloud/cloud_features/autonomous_it.html">autonomous_it</a></li></ol></li><li class="chapter-item "><a href="tfcloud/tfgrid/tfgrid.html">OpenSource TFGrid</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tfcloud/tfgrid/tokenomics_tfgrid.html">tokenomics_tfgrid</a></li><li class="chapter-item "><a href="tfcloud/tfgrid/roadmap_tfgrid.html">roadmap TFGrid</a></li></ol></li><li class="chapter-item "><a href="tfcloud/mycelium/mycelium.html">Mycelium</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tfcloud/mycelium/mycelium_components.html">Components</a></li><li class="chapter-item "><a href="tfcloud/mycelium/mycelium_roadmap.html">Roadmap</a></li><li class="chapter-item "><a href="tfcloud/mycelium/mycelium_faq.html">FAQ</a></li></ol></li><li class="chapter-item "><a href="tfcloud/techvision/techvision.html">tech vision</a></li><li class="chapter-item "><a href="tfcloud/ourworld/ourworld_venture_creator.html">OurWorld Venture Creatpr</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">ThreeFold Cloud Internal</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><img src="tfcloud/intro/img/intro.png" alt="" /></p>
+<h1 id="threefold-cloud"><a class="header" href="#threefold-cloud"> ThreeFold Cloud.</a></h1>
+<p>The digital landscape is ready for a transformative cloud solution. Presently, dominant cloud platforms like Google, Amazon, and Microsoft are centralized. Yet, a significant portion of the global population remains underserved, lacking robust internet access and proximate data and computing resources.</p>
+<p>Enter ThreeFold. Over the past five years, we've been pioneering technology that facilitates the global distribution of compute, storage, and network capacity. While our current reach might not rival giants like Google, the potential of our approach is groundbreaking. The ThreeFold Grid, our foundational infrastructure, operates on principles distinct from conventional cloud giants.</p>
+<p>The uniqueness of the ThreeFold Grid lies in its decentralized ownership. Numerous individuals and companies worldwide contribute hardware to the collective, enhancing global access to storage, compute, and network resources. These contributors, known as ThreeFold farmers, receive ThreeFold Tokens as rewards for both providing this capacity and also earn additional rewards when the capacity is utilized.</p>
+<p>Based in Dubai, ThreeFold Cloud is now delivering services on top of this grid. Yet, it ensures that every user retains complete control and access to their deployed workloads.</p>
+<h3 id="threefold-dmcc-the-driving-force-behind-threefold-cloud"><a class="header" href="#threefold-dmcc-the-driving-force-behind-threefold-cloud">ThreeFold DMCC: The Driving Force Behind ThreeFold Cloud</a></h3>
+<p>ThreeFold Cloud operates under the umbrella of ThreeFold DMCC, a company based in one of the best regulated economic free zones in Dubai. This strategic positioning allows us to tap into the dynamic and innovative environment of the region, fostering growth and expansion of the ThreeFold grid.</p>
+<p>ThreeFold DMCC is not just our corporate identity; it's the hub from which we manage and operate essential community tools. This includes platforms like our dedicated forum, where users, developers, and enthusiasts can engage in meaningful discussions, share insights, and collaborate on projects. Additionally, our websites, which serve as the primary interface for our audience to learn about and interact with our offerings, are also managed from this central point.</p>
+<p>ThreeFold DMCC is the organizational backbone, ensuring smooth operations, community engagement, and the continuous scaling of the ThreeFold grid.</p>
+<h3 id="threefold-clouds-expansion-and-fundraising-initiative"><a class="header" href="#threefold-clouds-expansion-and-fundraising-initiative">ThreeFold Cloud's Expansion and Fundraising Initiative</a></h3>
+<p>Recognizing the need to enhance our capabilities and streamline the rollout of new services, our immediate focus is on expanding our team. By bolstering our human resources, we aim to ensure efficient development, deployment, and support for our upcoming offerings.</p>
+<p>To facilitate this growth, we are currently in the midst of a fundraising campaign. Our projections are optimistic, and we anticipate securing the necessary funds within the next three months. Once achieved, these funds will be instrumental in launching the new services that our team is diligently working on.</p>
+<p>Furthermore, this expansion is not just about introducing new services. It also encompasses a strategic upgrade to the ThreeFold grid. This upgrade is particularly significant for our community of farmers. We're transitioning to a revamped tokenomics model, designed to address and rectify challenges faced with the existing model.</p>
+<p>In essence, this period marks a transformative phase for ThreeFold Cloud. With a combination of fundraising, team expansion, and system upgrades, we're setting the stage for a more robust, efficient, and rewarding cloud ecosystem for all our stakeholders.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="collaboration"><a class="header" href="#collaboration">Collaboration</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="forum-code-of-conduct"><a class="header" href="#forum-code-of-conduct">Forum Code of Conduct</a></h2>
+<h3 id="our-forum-our-home"><a class="header" href="#our-forum-our-home">Our Forum, Our Home</a></h3>
+<p>Think of this forum as our virtual home. We've opened our doors to guests so we can gather and discuss our shared passion: the decentralized project, ThreeFold. Just as in any home, we have certain expectations about behavior and respect.</p>
+<h3 id="safety-first"><a class="header" href="#safety-first">Safety First</a></h3>
+<p>Our primary goal is to create a space where everyone feels safe and respected. Personal attacks, harassment, and any form of discrimination will not be tolerated.</p>
+<h3 id="real-identities"><a class="header" href="#real-identities">Real Identities</a></h3>
+<p>Anonymity can sometimes lead to harmful behavior. To foster trust and accountability in our community, users must not use pseudonyms or fake profiles. Stand by your words with your real identity. </p>
+<h3 id="were-human"><a class="header" href="#were-human">We're Human</a></h3>
+<p>Remember, we're all human. We'll make mistakes, have our biases, and sometimes get things wrong. 
+This is our forum, and while we strive for fairness and accuracy, we won't always be perfect, and we expect no-one to be.</p>
+<h3 id="purpose-over-process-decentralization-is-not-a-purpose-by-itself"><a class="header" href="#purpose-over-process-decentralization-is-not-a-purpose-by-itself">Purpose Over Process, Decentralization is not a purpose by itself</a></h3>
+<p>While decentralization can have its benefits, it's not our main goal. Our focus is on meaningful discussions, fostering community, and ensuring a respectful environment.</p>
+<h3 id="embrace-positivity-and-shared-growth"><a class="header" href="#embrace-positivity-and-shared-growth">Embrace Positivity and Shared Growth</a></h3>
+<p>We deeply value the energy and spirit our community members bring. We believe in the beauty of what we create together, rooted in the fundamental principle that everyone joins our forum with good intentions. By fostering a culture of sharing — our knowledge, experiences, and aspirations — we create a cycle of giving and receiving. It's this mutual respect and belief in collective growth that propels us forward. We kindly ask all members to contribute with a positive energy, recognizing the potential and goodness in every conversation.</p>
+<h3 id="content-guidelines"><a class="header" href="#content-guidelines">Content Guidelines</a></h3>
+<ul>
+<li>
+<p><strong>Cryptocurrency Discussions</strong>: We are not a cryptocurrency-centric project. Please avoid discussions about token valuations, trading, or any other crypto-related activities. We aim to focus on our core values and mission, rather than market dynamics or speculative behaviors.</p>
+</li>
+<li>
+<p><strong>Spirituality and Religion</strong>: This forum is not a platform for spiritual or religious discussions. While we respect individual beliefs, we request participants to refrain from introducing such topics here.</p>
+</li>
+<li>
+<p><strong>Legality</strong>: Posts promoting or discussing illegal activities, according to any jurisdiction, are strictly prohibited and will be removed.</p>
+</li>
+</ul>
+<h3 id="concentration-on-relevance"><a class="header" href="#concentration-on-relevance">Concentration on Relevance</a></h3>
+<p>Our responses are crafted not just for the sake of speaking, but to genuinely address the essence of a forum thread. We prioritize adding content that directly pertains to the topic at hand. Linking to other forum posts is reserved for when it's truly pertinent, and we avoid diverting one thread's focus to champion another.</p>
+<p>We love the less is more concept, less words, more impact.</p>
+<h3 id="right-of-admission-reserved"><a class="header" href="#right-of-admission-reserved">Right of Admission Reserved</a></h3>
+<p>As hosts, we reserve the right to remove anyone or any content from this forum if we believe they are not aligned with the values and guidelines set forth above.</p>
+<blockquote>
+<p>Thank you for respecting these guidelines and ensuring our forum remains a constructive and positive space for all.</p>
+</blockquote>
+<h2 id="role-of-moderators"><a class="header" href="#role-of-moderators">Role of Moderators</a></h2>
+<p>Our forum moderators are instrumental in upholding the values outlined above. They, like all of us, are human and may err from time to time. We ask for understanding and appreciation for their efforts and dedication.</p>
+<p>Their responsibilities include:</p>
+<ul>
+<li>Enhancing our communication and collaboration.</li>
+<li>Upholding a positive forum atmosphere.</li>
+<li>Removing off-topic or malicious posts.</li>
+<li>Deleting content that contradicts the guidelines stated above.</li>
+<li>Taking action against participants who consistently breach our code of conduct.</li>
+</ul>
+<p>Remember, this forum operates under the umbrella of ThreeFold Cloud, a Dubai-based company. While our primary objective is to champion the ThreeFold Grid—a decentralized technology platform—ThreeFold Cloud also has a commercial mission: to offer professional, well-managed solutions atop the TFGrid.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="community-tools"><a class="header" href="#community-tools">Community tools.</a></h1>
+<blockquote>
+<p>TODO</p>
+</blockquote>
+<p>we are working internally on proposal on https://docs.google.com/document/d/1sx5UO-tUpi-_PwSF6ptTnT1MHU-Tjkny15Cj4vEoBuA/edit  (not public)</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="planned-products"><a class="header" href="#planned-products">Planned Products</a></h2>
+<p>Planned workloads for ThreeFold Cloud?</p>
+<p>infrastructure for users to deploy their own blockchain solutions seamlessly.</p>
+<ul>
+<li>3Bot - Your Digital Assistant:
+<ul>
+<li>3Bot is designed to be your digital right hand. It can manage a range of tasks, from sending emails and overseeing your calendar to handling chats and financial transactions</li>
+<li>With 3Bot, deploying solutions on the cloud becomes a breeze. Whether it's setting up a new website or launching a specific application, 3Bot streamlines the process, ensuring efficiency and reliability.</li>
+</ul>
+</li>
+<li>Virtual Datacenters
+<ul>
+<li>Are the more advanced workloads allowing people to deploy any IT workload on the grid using state of the art self-healing management techniques.</li>
+</ul>
+</li>
+<li>Web Services: 
+<ul>
+<li>Catering to the foundational needs of modern businesses and individuals, ThreeFold Cloud supports the deployment of websites and a variety of open-source applications.</li>
+</ul>
+</li>
+<li>Artificial Intelligence (AI):
+<ul>
+<li>The current AI ecosystem is predominantly controlled by a select few. ThreeFold Cloud challenges this status quo by enabling users to swiftly deploy their own AI models.</li>
+<li>With ThreeFold Cloud, not only can you own your AI model, but you can also ensure it remains unbiased. Collaborate with peers, friends, or colleagues to create and control AI solutions that truly serve your needs without external influences.</li>
+</ul>
+</li>
+<li>BTC Lightning Nodes
+<ul>
+<li>Allowing users to engage in faster, more scalable Bitcoin transactions. This is crucial as the demand for efficient Bitcoin transactions grows. By utilizing the Lightning Network, users can benefit from reduced fees and near-instant transfers, making microtransactions and everyday Bitcoin usage more feasible.</li>
+</ul>
+</li>
+<li>Private Blockchains: 
+<ul>
+<li>Recognizing the growing importance of decentralized ledger technologies, ThreeFold Cloud provides the tools and </li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="features"><a class="header" href="#features">Features</a></h2>
+<h3 id="user-friendly-design"><a class="header" href="#user-friendly-design">User-Friendly Design:</a></h3>
+<p>ThreeFold Cloud is not just for tech-savvy individuals or expert system administrators. It's designed to be accessible and user-friendly, ensuring a broad range of IT users (people who administer applications in the cloud) can operate it with ease.</p>
+<p>We leapfrog the current state of the cloud, we emphasize simplicity of operation and avoid complicated user interfaces.</p>
+<h3 id="interfaces"><a class="header" href="#interfaces">Interfaces:</a></h3>
+<ul>
+<li>Chat Interface: 
+<ul>
+<li>The primary mode of interaction for most users will be the chat interface. This allows users to communicate with their 3Bot using conversational language. The system will be multilingual, accommodating users from various linguistic backgrounds.</li>
+</ul>
+</li>
+<li>3Script - The Cloud Language:
+<ul>
+<li>Beyond conventional languages, ThreeFold Cloud introduces 3Script, a high-level cloud language. It's designed to be straightforward, with basic constructs that simplify the process of setting up and managing your cloud resources.</li>
+</ul>
+</li>
+<li>Voice:
+<ul>
+<li>The system will even understand your voice.</li>
+<li>Your personal AI system translates your voice to 3script and makes sure you have the best of both worlds, convenience of using your own spoken language and auditability of 3script.</li>
+</ul>
+</li>
+<li>API: 
+<ul>
+<li>For those looking to delve deeper and develop on the ThreeFold Cloud, there's an Application Programming Interface (API) available.</li>
+</ul>
+</li>
+</ul>
+<h3 id="autonomous-workloads"><a class="header" href="#autonomous-workloads">Autonomous Workloads:</a></h3>
+<p>The standout feature of ThreeFold Cloud is its emphasis on autonomous workloads. But what does that mean? Essentially, these are applications or software that operate on your behalf in the cloud. </p>
+<p>Examples range from basic websites to more complex systems like mail servers, CRM systems, or AI-driven platforms. These applications function in a self-driving or autonomous mode, reducing the need for constant manual oversight.</p>
+<p>see <a href="tfcloud/cloud_features/autonomous_it.html">autonomous_it</a></p>
+<h4 id="example-workload-is-a-personal-ai-cloud"><a class="header" href="#example-workload-is-a-personal-ai-cloud">Example workload is a personal AI-Cloud</a></h4>
+<p>Within the ThreeFold Cloud ecosystem, a workload represents a specific set of tasks or operations that the system is designed to handle. One such example is the AICloud.</p>
+<p>The AICloud is a testament to ThreeFold Cloud's commitment to developing autonomous solutions. Instead of users having to delve into intricate details, specifying requirements like the exact virtual machine configurations, the platform simplifies the process. Users can express their needs in more intuitive terms. For instance, someone might say, &quot;I want an AI cloud equipped with the best chat interface.&quot;</p>
+<p>The AICloud is designed to be user-centric and adaptive. If a user provides a link containing specific information, the AICloud can ingest this data. This allows for the creation of a personalized chatbot, potentially powered by advanced models like GPT but private, trained specifically on the user's data. The result is a tailored AI chat solution, unique to each user's requirements.</p>
+<p>Such capabilities are not just theoretical; they are very much achievable. ThreeFold Cloud is actively working on making them accessible to users, emphasizing ease of use and customization.</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="threefold-cloud-a-beacon-for-ethical-digital-operations"><a class="header" href="#threefold-cloud-a-beacon-for-ethical-digital-operations">ThreeFold Cloud: A Beacon for Ethical Digital Operations</a></h2>
+<p>ThreeFold Cloud is not just another cloud platform; it's a vision for a digital realm that champions ethical, responsible, and community-driven operations. Our mission is to make ThreeFold Cloud the go-to platform for conscientious individuals and organizations, ensuring it remains a space free from malicious intent.</p>
+<h3 id="guarding-against-criminals"><a class="header" href="#guarding-against-criminals">Guarding Against Criminals</a></h3>
+<p>We are deeply committed to maintaining the integrity of the ThreeFold Cloud. Recognizing the potential risks of the digital age, we are implementing robust governance mechanisms to deter and prevent criminal activities. Our aim is to ensure that the cloud remains a safe, secure, and trustworthy environment for all its users.</p>
+<h3 id="decentralization-at-its-core"><a class="header" href="#decentralization-at-its-core">Decentralization at its Core</a></h3>
+<p>Centralized systems often become breeding grounds for power imbalances and potential misuse. To counteract this, ThreeFold Cloud is designed with decentralization as a foundational principle. This approach not only enhances security and resilience but also ensures that power and control are equitably distributed among its community.</p>
+<h3 id="empowering-open-source-development"><a class="header" href="#empowering-open-source-development">Empowering Open-Source Development</a></h3>
+<p>Understanding the transformative potential of open-source projects, we've established a treasury, enriched with ThreeFold tokens and other digital currencies. This treasury is not just a financial reserve; it's a testament to our commitment to fostering innovation. Developers and innovators who share our vision and wish to contribute to the ThreeFold Cloud ecosystem can be rewarded from this treasury. Whether it's by building new solutions, enhancing existing ones, or assisting ThreeFold Cloud customers, we aim to incentivize and support community-driven development.</p>
+<h3 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h3>
+<p>In essence, ThreeFold Cloud is more than a technological platform; it's a movement. A movement towards a digital future where ethics, community, and innovation coalesce to create a cloud that truly serves the greater good.</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="the-cloud-lifecycle"><a class="header" href="#the-cloud-lifecycle">The Cloud Lifecycle</a></h2>
+<p>ThreeFold Cloud is revolutionizing the way we perceive and interact with cloud services. </p>
+<p>Here's how it works:</p>
+<p>ThreeFold Cloud introduces a groundbreaking approach to autonomous cloud management, underpinned by three core concepts that ensure seamless operation and user control. The 3 core concepts:</p>
+<h3 id="1-objective"><a class="header" href="#1-objective">1. Objective:</a></h3>
+<p>Definition: </p>
+<ul>
+<li>The user defines their desired cloud configuration, also known as the 'wished state' or 'objective'.</li>
+<li>Example: a user is specifying the need for a virtual data center with three virtual machines located in specific European countries, connected through a private network, and associated with a particular domain name.</li>
+<li>The objective can also be specified by the 3script, which is easy to embed into the wiki system and it's easy to interpret by the personal AI system</li>
+</ul>
+<p>Visualization: </p>
+<ul>
+<li>This wished state can be visualized as a sort of wiki system (looks like an searchable ebook with nice graphics), allowing users to easily comprehend their specified objectives.</li>
+</ul>
+<h3 id="2-reality-state"><a class="header" href="#2-reality-state">2. Reality State:</a></h3>
+<p>Function: The 3Bot constantly assesses the current state of the cloud resources, termed the 'reality state'. It evaluates the existing setup, such as the presence of a virtual data center or the uptime of services, and contrasts this with the user's wished state. This may often result in change requests.</p>
+<p>Then querying of the reality state is also done through 3script and allows full auditing and logging of requested information and its result. 3script is human readable and easy to understand by AI systems.</p>
+<h3 id="3-change-request"><a class="header" href="#3-change-request">3. Change Request:</a></h3>
+<p>Change Request Creation: If discrepancies arise between the wished and reality states, the 3Bot calculates these differences and formulates a 'change request'.</p>
+<p><strong>Outcome of Comparison:</strong> The change request is the result of comparing the reality state with the wished state. It comprises explicit actions, like creating or deleting a virtual machine or connecting to a network bridge.</p>
+<p>The change requests are also logged in 3script, this leads to full auditability.</p>
+<p>The change request can even be submitted to a DAO or another consensus driven decision mechanism prior to implementation.</p>
+<p>The 3Bot will continuously check objective vs reality state and create change requests, which can be automatically executed or checked by humans.</p>
+<h2 id="3bot-executes-above-concept"><a class="header" href="#3bot-executes-above-concept">3Bot executes above concept</a></h2>
+<p>The 3Bot, equipped to integrate with both Web2 and Web3, carries out these actions, aligning the reality with the wished state. It continually compares the two states, and if any variance is detected, such as a website being down, the 3Bot diagnoses the issue, formulates corrective actions, and generates new change requests.</p>
+<p><strong>Automated Corrections:</strong> This system ensures that any disruptions or deviations are promptly addressed. For instance, if a website goes offline, the 3Bot identifies the cause, be it a malfunctioning virtual machine or another issue, and takes corrective measures.</p>
+<p>The synergy of these three concepts – the objective, reality state, and change request – grants users unparalleled control over their cloud operations. This dynamic system can adapt to the customers requirements, making it incredibly versatile. Moreover, its compatibility with Web2 and Web3 services amplifies its potential. Users can integrate diverse functionalities, from Bitcoin transactions to email communications or chat solutions, making ThreeFold Cloud a holistic and innovative solution for modern cloud needs.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="opensource-tfgrid"><a class="header" href="#opensource-tfgrid">OpenSource TFGrid</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="tfgrid-tokenomics-upgrade"><a class="header" href="#tfgrid-tokenomics-upgrade">TFGrid Tokenomics Upgrade</a></h2>
+<p>The tokenomics of any digital ecosystem plays a pivotal role in determining its sustainability, growth, and value proposition. In the case of ThreeFold, there are evident challenges with the current tokenomics model that necessitate an upgrade.</p>
+<p>The current tokenomics model of ThreeFold doesn't fully reflect the platform's worth and potential. An upgrade is essential to rectify existing challenges, ensuring that the tokenomics aligns with the platform's growth trajectory and offers a fair representation of its value.</p>
+<ul>
+<li>Lack of Commercial Utilization: 
+<ul>
+<li>The present model doesn't sufficiently incentivize commercial utilization. This means that the tokens, instead of being used to facilitate transactions or access services within the ecosystem, are often liquidated.</li>
+</ul>
+</li>
+<li>Selling Pressure from Farmers: 
+<ul>
+<li>The current dynamics have led to a scenario where ThreeFold farmers frequently sell their tokens. This consistent selling exerts downward pressure on the token's price, preventing it from realizing its true potential value.</li>
+</ul>
+</li>
+<li>Undervalued Market Cap: 
+<ul>
+<li>The cumulative effect of these factors has resulted in a market capitalization for the liquid tokens that is significantly undervalued. With a market cap hovering around 5 million dollars, it starkly contrasts with the intrinsic value and potential of the ThreeFold ecosystem.</li>
+</ul>
+</li>
+</ul>
+<p>Future Optimism: Despite the current challenges, there's a strong belief in the imminent positive shift in the token's value. As ThreeFold gears up to launch more commercial workloads and with the anticipated funding for TF Cloud, there's an expectation of increased commercial utilization. This, in turn, can drive demand for the token, potentially boosting its price and aligning the market cap more closely with ThreeFold's true value.</p>
+<p>Some more info see <a href="https://github.com/threefoldtech/home/issues/1448">https://github.com/threefoldtech/home/issues/1448</a> </p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="roadmap-tfgrid"><a class="header" href="#roadmap-tfgrid">roadmap TFGrid</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><p><img src="tfcloud/mycelium/img/mycelium_0.png" alt="image alt text" /></p>
+<h1 id="mycelium-a-platform-for-conscious-decentralization"><a class="header" href="#mycelium-a-platform-for-conscious-decentralization">Mycelium: A Platform for Conscious Decentralization</a></h1>
+<p>Mycelium is a software platform designed to become smarter and more creative together and expand collective consciousness. Built on proven technologies, Mycelium allows peer-to-peer networks to flourish without centralized intermediaries.</p>
+<p>Mycelium has no central point of control. The voluntary nodes forming the Mycelium network are operated by individuals and communities who share resources and capabilities to manifest a common vision. This structure aligns with principles of decentralization and autonomy.</p>
+<p>Rich capabilities empower users to connect, communicate, transact and collaborate while retaining ownership of their own data and digital identities. Features like self-sovereign identity and encrypted communications enhance privacy and user agency.</p>
+<p>Incentive structures reward conscious contributions that regenerate communities and the planet. The Mycelium ecosystem cultivates an ethos of compassion, sustainability and abundance.</p>
+<p>With Mycelium, we can rebuild critical systems - from currency to culture - in a more decentralized, conscious manner. Mycelium provides the infrastructure for a digitally-connected society aligned with our highest values. </p>
+<p><strong>A worldwide web of compassion is within reach if we take up the challenge.</strong></p>
+<h1 id="what-will-you-be-able-to-do-in-first-version-of-mycelium"><a class="header" href="#what-will-you-be-able-to-do-in-first-version-of-mycelium">What will you be able to do in first version of Mycelium</a></h1>
+<p>The first version of Mycelium enables makers and creators to build their own decentralized internet, inviting friends into the new digital worlds they imagine.</p>
+<h3 id="host-your-website-blog-wiki--100-decentralized"><a class="header" href="#host-your-website-blog-wiki--100-decentralized">Host your website, blog, wiki … 100% decentralized</a></h3>
+<p>With no single point of failure, your website can scale seamlessly. Reach a vast audience directly, with no intermediaries. Monetizing content is as easy as writing a page. Mycelium makes publishing open, resilient, and profitable - connecting your ideas to your community like never before.</p>
+<h3 id="reserve-your-unique-name-manage-your-identity-and-reputation"><a class="header" href="#reserve-your-unique-name-manage-your-identity-and-reputation">Reserve your unique name, Manage your Identity and Reputation.</a></h3>
+<p>Each website is hosted under a unique name you chose. This name is yours forever, be fast to claim your space on our new Internet. All funds received from paying for name services are used to develop mycelium further by means of a quadratic funding pool (see gitcoin).</p>
+<p>Identity and Reputation are maybe your most 2 valuable assets on our new Internet. We take authenticity and reputation very seriously and it forms the base of any other feature.</p>
+<h3 id="become-smarter-together"><a class="header" href="#become-smarter-together">Become smarter together.</a></h3>
+<p>Feed diverse knowledge into your co-owned AI - from life experiences to company data. Together, become smarter than any centralized system. Pool knowledge within trusted circles to train AIs that understand your needs. Guide them with your values. Mycelium lets communities control their AI destinies, unlocking collective intelligence. Your data stays yours, but knowledge is created together in all authenticity.</p>
+<h3 id="communicate-globally-over-shortest-path-possible-in-all-privacy"><a class="header" href="#communicate-globally-over-shortest-path-possible-in-all-privacy">Communicate Globally over Shortest Path Possible in all Privacy</a></h3>
+<p>Any device, service or person gets connected over our mycelium network, the shortest path will always be chosen, all traffic is end2end encrypted and cannot be intercepted. If a network connection goes down you are automatically re-routed over networks of your community. You receive rewards for being a provider of network capacity.</p>
+<p>You can send files or messages to any of your friends or business partners, the messages will be delivered ultra reliable using the shortest path. You can never lose any drop of communication nor be intercepted.</p>
+<h3 id="be-your-own-youtube"><a class="header" href="#be-your-own-youtube">Be your own youtube.</a></h3>
+<p>You want to share a lot of video or audio content, you don’t like to be a product of youtube, why not be your own youtube. Our youtube has built in content delivery capabilities with caching (you can reach millions of users). You can also monetize your content using Fungi Pay. </p>
+<p>We pre-populate this video peer2peer network with 3000 well chosen educational videos (see Sikana) which can now be watched for the next 4 billion times but now faster and fully decentralized.</p>
+<h3 id="collaborate-with-your-circles"><a class="header" href="#collaborate-with-your-circles">Collaborate with your Circles.</a></h3>
+<p>Mycelium Circles provide the infrastructure to mobilize collective intelligence for the greater good.</p>
+<p>With Mycelium, users can self-organize into groups called Circles. You bring together whoever you need to achieve a shared purpose. Circles allow fluid, peer-to-peer teamwork aligned with your values.</p>
+<p>Circles provide versatile features to align efforts and accelerate results. Define milestones, allocate resources, implement Agile workflows, and track progress in integrated systems. Shared ownership of goals and outcomes fosters co-creation.</p>
+<p>For initiatives needing funding, Circles can hold a collective treasury with clear rules for utilization. This enables grassroots initiatives while limiting centralized control of assets.</p>
+<p>Circles also facilitate society-wide cooperation across organizations. With bridges between Circles, aligned groups can come together in common cause - from regenerating ecosystems to providing universal healthcare.</p>
+<h3 id="manage-and-share-your-own-data-manage-your-own-time"><a class="header" href="#manage-and-share-your-own-data-manage-your-own-time">Manage and share your own data, manage your own time.</a></h3>
+<p>Manage your contacts, agenda, files, … Share your data with who you want.
+Allow app developers to connect to you and fetch your information but on your terms.</p>
+<p>Your data can never be lost nor corrupted. </p>
+<h3 id="for-the-techies-deploy-your-own-virtual-datacenter-or-ai-system"><a class="header" href="#for-the-techies-deploy-your-own-virtual-datacenter-or-ai-system">For the techies: deploy your own Virtual Datacenter or AI System</a></h3>
+<p>Techies can deploy Linux or AI apps in the Mycelium Cloud, while still connecting to the traditional internet. This allows building next-generation solutions leveraging all Mycelium's benefits but being compatible with the current web2 and web3 world.</p>
+<h3 id="for-the-developers-create-advanced-true-p2p-apps-with-batteries-included"><a class="header" href="#for-the-developers-create-advanced-true-p2p-apps-with-batteries-included">For the developers: Create Advanced true P2P Apps with batteries included.</a></h3>
+<p>Developers can build purpose-driven applications on top of Mycelium's decentralized infrastructure. Leveraging components like the reliable message bus, distributed storage, vector db, and AI workers</p>
+<p>You can even leverate Fungi Pay and Bridges to the existing banking system.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id=""><a class="header" href="#"><img src="tfcloud/mycelium/img/mycelium_1.png" alt="image alt text" /></a></h1>
+<h1 id="our-technical-platform"><a class="header" href="#our-technical-platform">Our Technical Platform</a></h1>
+<h3 id="mycelium-network-agent"><a class="header" href="#mycelium-network-agent">Mycelium Network Agent</a></h3>
+<p>A smart agent which runs on mobile phones, desktop and servers. All agents together create the Mycelium Network which might be the most reliable and secure internet network ever created.</p>
+<p>The Network agent also provides other network services like name services, p2p database, reputation mgmt, micro payments, reliable message bus,  … </p>
+<p>All network traffic is end2end encrypted and can survive internet network outages. Hackers cannot intercept traffic or modify any information. The shortest path is always chosen between 2 participants in a communication flow (not based on algorithmic properties but based on latency and quality of network).</p>
+<h3 id="mycelium-cloud"><a class="header" href="#mycelium-cloud">Mycelium Cloud</a></h3>
+<p>Another name for our newest generation of the ThreeFold Cloud, the ability to host any linux, blockchain or AI workload on a global scale as long as we have enough motivated farmers to provide capacity. Farmers get rewarded for providing network, compute and storage capacity.</p>
+<h3 id="mycelium-ai"><a class="header" href="#mycelium-ai">Mycelium AI</a></h3>
+<p>A network of GPU’s which can be used by developers in the most flexible way using micropayments, avoiding large capex requirements. Our Aim is to enable the largest AI Network in the world for emerging countries. Micropayments are used to reward the providers of the GPU’s as well as Vector DB’s.</p>
+<h3 id="mycelium-search"><a class="header" href="#mycelium-search">Mycelium Search</a></h3>
+<p>AI based search, accessible by all participants and hosted by all participants in such a way we can index our new Internet. Is using opensource AI Models and large distributed vector databases. </p>
+<h3 id="mycelium-circles"><a class="header" href="#mycelium-circles">Mycelium Circles</a></h3>
+<p>Collaboration tool written in Vlang, output is a nicely formatted ebook which dynamically gets regenerated depending on business model, crm data, cash flow, milestones, necessary requirements, tasks, … </p>
+<p>This is a revolutionary tool to be the base for our future collaboration.</p>
+<h3 id="fungi-stor"><a class="header" href="#fungi-stor">Fungi Stor</a></h3>
+<p>Different storage and database tools are required for any app to come alive, </p>
+<ul>
+<li>Fungi VECTOR: needed for AI Applications</li>
+<li>Fungi STOR (Storage)</li>
+<li>Fungi STREAM (video, audio)</li>
+<li>Fungi FS (FileSystem)  (Q2 2024)</li>
+<li>Fungi SQL (H2 2024)</li>
+</ul>
+<p>All of these storage applications work in full decentralized peer2peer way on top of the Mycelium Cloud and Network.</p>
+<h3 id="fungi-pay"><a class="header" href="#fungi-pay">Fungi Pay</a></h3>
+<p>None of the above can be done without a micropayment solution. </p>
+<p>Fungi Pay allows consumers of any network, compute, storage or any other cloud service to pay super small fees without latency and complications. Fungi Pay is based on IOU’s</p>
+<p>These IOU’s are called Spores or in short SPRS , 1 SPR is a unit of exchange of value. You can exchange anything for anything else everywhere.</p>
+<h3 id="fungi-bridge"><a class="header" href="#fungi-bridge">Fungi Bridge</a></h3>
+<p>IOU’s need to be rolled up and be transformed to money transactions on blockchain or classic banking systems. Fungi Bridge takes care of this function and works from out of a sovereign digital freezone.</p>
+<h3 id="mytwin-mycelium-or-my-twin"><a class="header" href="#mytwin-mycelium-or-my-twin">MyTwin (Mycelium or My Twin)</a></h3>
+<p>Each Person owns a MyTwin, which is your avatar acting on your behalf on the Mycelium Network. Your MyTwin (MT) is the only digital creator who has the capability to reconstruct and manage your private data.</p>
+<h3 id="vlang"><a class="header" href="#vlang">VLang</a></h3>
+<p>Our own fast compiled safe development language.</p>
+<h3 id="3node"><a class="header" href="#3node">3Node</a></h3>
+<p>ThreeFold Nodes also called 3Nodes are perfect hosts for the Mycelium Ecosystem, each of the above components can be hosted on 3Nodes.</p>
+<p>In v4 of ThreeFold, farmers receive SPRS in exchange to TFT by means of a Fungi Bridge.</p>
+<h3 id="ourphone"><a class="header" href="#ourphone">OurPhone</a></h3>
+<p>Eventually we need our own phone, fully integrated and ready to go to unlock this ecosystem.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="-1"><a class="header" href="#-1"><img src="tfcloud/mycelium/img/mycelium_2.png" alt="image alt text" /></a></h1>
+<h1 id="roadmap"><a class="header" href="#roadmap">ROADMAP</a></h1>
+<p>Still very rough… </p>
+<h2 id="v10--minimal-viable-product-for-the-early-adopter"><a class="header" href="#v10--minimal-viable-product-for-the-early-adopter">V1.0 = minimal viable product for the early adopter</a></h2>
+<p>End Q1 2023 should be possible if we can focus on creation and get in expansion mode. AI will still be somewhat basic. In parallel we need to grow our community in farmers to be ready for expansion.</p>
+<h2 id="v11--more-user-friendly-interaction"><a class="header" href="#v11--more-user-friendly-interaction">V1.1 = more user friendly interaction</a></h2>
+<ul>
+<li>
+<p>Super power full conversational UI for our digital life</p>
+</li>
+<li>
+<p>Nice web UI (or native for mobile)</p>
+</li>
+<li>
+<p>Much more powerful AI features</p>
+</li>
+<li>
+<p>First version of ourphone</p>
+</li>
+</ul>
+<h2 id="v12--advanced-features"><a class="header" href="#v12--advanced-features">V1.2 = advanced features</a></h2>
+<ul>
+<li>Metaverse (Augmented reality, …) using our own p2p gaming engine based on vlang.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="faq"><a class="header" href="#faq">FAQ</a></h1>
+<h2 id="is-this-a-blockchain-or-crypto-project"><a class="header" href="#is-this-a-blockchain-or-crypto-project">Is this a blockchain or crypto project</a></h2>
+<p>NO, we are compatible with many blockchains but we don’t rely on them. We believe peer2peer and consensus driven decision systems with bridges to other blockchains are more powerful and way more scalable, secure and efficient.</p>
+<h2 id="is-this-realistic"><a class="header" href="#is-this-realistic">Is this realistic?</a></h2>
+<p>We have been working on this for many many years over different of our own startups. We believe we have the pieces developed and ready to be integrated to a productized solution which can be used by many.</p>
+<p>ThreeFold.IO can be seen as our 3e generation implementation of a peer2peer cloud.</p>
+<p>We are very proud of our team and grateful for the constant out of box thinking.</p>
+<h2 id="when-will-we-have-it"><a class="header" href="#when-will-we-have-it">When will we have it?</a></h2>
+<p>Within 6 months is realistic, we are finalizing our next funding round and then we can go fast.</p>
+<h2 id="how-does-mycelium-compare-to"><a class="header" href="#how-does-mycelium-compare-to">How does Mycelium compare to?</a></h2>
+<ul>
+<li>
+<p>Urbit: a truly amazing project, many similar ideals and goals, we hope to be easier for people to start with and also be production quality faster.</p>
+</li>
+<li>
+<p>Holochain: a very nice project, focussed on personal data pods as well, with intelligent decentralized peer2peer compute. Longer history than us. Good community. </p>
+</li>
+</ul>
+<p>Maybe rather than compete we can even work together?</p>
+<p>Some of the problems we have tackled we have literally been trying to solve now for more than 30 years, we believe we are getting close, let's together try to break it, so we can fix it.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><img src="tfcloud/techvision/img/techvision_0.png" alt="image alt text" /></p>
+<h1 id="autonomous-safe-cloud-and-ai-platform"><a class="header" href="#autonomous-safe-cloud-and-ai-platform">Autonomous Safe Cloud and AI Platform</a></h1>
+<p>Imagine a world where everyone is empowered to deploy any Blockchain, Cloud or AI workloads with self-healing and Autonomous capabilities. This system would dynamically allocate or deallocate CPU’s and GPUs based on computational needs. The Autonomous System would recover from unforeseen scenarios, restoring operational efficiency and adhering to redundancy requirements to ensure continuous and reliable performance.</p>
+<p>This entire process runs without compromising security. The system isn't managed by the AI itself, but by separate circuits tied to a collective of human stakeholders (we call this a Human Chain). These stakeholders retain control over the operation at all times. It could be that a consensus among these stakeholders is necessary before executing specific change requests, serving as a measure for enhanced security. This is ensured through the deployment of two independent, unconnected circuits. The first is the AI circuit, essentially your AI application, which can harness thousands of GPUs and process vast amounts of information. Concurrently, there's the Control Circuit, which is governed by Human Chains, keeping human oversight integral to the system's operation. </p>
+<p>The AI Circuit doesn't have access to the Control Circuit. Any modification in the Control Circuit requires consensus before implementation, and our foolproof system ensures that all changes are deployed in strict accordance with the intended state (we call this a Tamper Proof deployment). This process guarantees a 100% match between the actual deployment and the originally planned modifications.</p>
+<p>The integrity of our Control Circuit is safeguarded from potential threats such as other AI systems, quantum computers, or cyber attackers. This security is due to our adoption of consensus-based principles analogous to those utilized in modern blockchain technologies.</p>
+<p>We believe that no other company approaches this level of capability. In our opinion, the creation of a true autonomous AI system is not possible without an operating system such as our Zero-OS.</p>
+<p>Above described system is not a dream but is close to being reality in our version 4.0 of our software stack.</p>
+<h1 id="threefold-mimics-nature"><a class="header" href="#threefold-mimics-nature">ThreeFold Mimics Nature</a></h1>
+<p><img src="tfcloud/techvision/img/techvision_1.png" alt="image alt text" /></p>
+<p>Today's IT systems are too complicated and layered, causing a whole heap of problems like using too much electricity, making life hard for developers, not using computer resources in the best way, and creating security, privacy, scalability, and performance issues. </p>
+<p>But there's good news: ThreeFold is hard at work building an autonomous generic usable IT platform. This platform is designed to offer everything needed to make the back-end of the Internet, AI, and Blockchain work better.</p>
+<p>At ThreeFold we like to look at nature and learn from it, this is also called Biomimicry. Biomimicry is a design discipline that seeks to solve human problems by emulating nature's time-tested patterns and strategies. The core idea is that nature, with 3.8 billion years of evolution and adaptation, has already solved many of the problems we are grappling with. Animals, plants, and microbes are the consummate engineers and designers.</p>
+<p>3Bots represent humans and work together in consensus to control any IT workload. They utilize the capacity of 3Nodes in such a way to maximize reliability, uptime, security, and privacy. The 3Bots facilitate users' access to the extensive knowledge encapsulated within the AI Cloud. This AI Cloud can be trained with contributions from thousands of individuals. Additionally, developers are relieved of the overwhelming complexity prevalent in today's systems.</p>
+<p>The current ThreeFold opensource platform is generation 3 and expanding every day, see <a href="tfcloud/techvision/img/https://dashboard.grid.tf/explorer/statistics">https://dashboard.grid.tf/explorer/statistics</a> . </p>
+<p>ThreeFold is now ready to deliver customized private versions of this platform for any use case which requires more efficiency, manageability, scalability and security.</p>
+<h1 id="unlimited-scalable--flexible"><a class="header" href="#unlimited-scalable--flexible">Unlimited Scalable &amp; Flexible</a></h1>
+<p><img src="tfcloud/techvision/img/techvision_2.png" alt="image alt text" /></p>
+<p>Millions of 3Nodes can empower the capacity layer, billions of 3Bots can be the Autonomous Agents managing any of the workloads in the network. Each 3Bot is owned by one person. The 3Bots can operate Autonomous Circles which are driven by Human Chains.</p>
+<p>The connection between the 3Bot and the owner is secure and private. All 3Bots are identified through a blockchain and reputation is an important concept to make sure our network is as safe as possible.</p>
+<p>AI Clouds are networks of AI capacity owned by Autonomous Circles. We believe in a world where there will not be one huge AI but many AI’s owned by different groups of people.</p>
+<p>The 3Bots can operate and communicate with any Web3 based technology. This provides for ultimate flexibility and allows Autonomous Circles or 3Bots to deal with smart contracts and digital currencies.</p>
+<h1 id="components"><a class="header" href="#components">COMPONENTS</a></h1>
+<h2 id="3node-and-zero-os"><a class="header" href="#3node-and-zero-os">3Node and Zero-OS</a></h2>
+<p><img src="tfcloud/techvision/img/techvision_3.png" alt="image alt text" /></p>
+<p>Zero-OS is our uniquely designed stateless Operating System which is efficient and optimized for autonomous operation. The Zero-OS uses blockchain technology to allow people by means of their 3Bots deploy IT workloads with more security and using less electricity. Zero-OS cannot be used by people directly, it's an operating system close to the hardware and designed to deliver the features as described below.</p>
+<p>A 3Node is a computer running the Zero-OS. 3Nodes are interconnected to together create an AI Cloud. An overlay secure private network is used to make sure IT workloads can communicate fast and privately.</p>
+<p><img src="tfcloud/techvision/img/techvision_4.png" alt="image alt text" /></p>
+<h2 id="ai-cloud"><a class="header" href="#ai-cloud">AI CLOUD</a></h2>
+<p>Capable of scaling up to millions of GPUs and thousands of independent but optionally interconnected clouds, each AI Cloud is equipped with its own blockchain used for tracking of farming (mining) and utilization/billing of the Cloud. The AI Clouds can be interconnected or deployed in a complete private context. The AI clouds are managed by consensus driven 3Bots.</p>
+<h2 id="3bot"><a class="header" href="#3bot">3BOT</a></h2>
+<p>3Bots are owned by people. Each 3Bot represents one person, they can together manage complicated IT workloads. People can define Autonomous Circles which represent topics of interest e.g. deployment of an AI system. Each project can be co-owned by more than one 3Bot (person).</p>
+<p>A 3Bot has the knowledge required to deploy, manage and operate IT workloads like AI, Blockchain or others. A 3Bot knows how to self heal and rebalance resources as required to optimize performance, energy usage and uptime. </p>
+<h2 id="autonomous--consensus-driven"><a class="header" href="#autonomous--consensus-driven">AUTONOMOUS &amp; CONSENSUS DRIVEN</a></h2>
+<h3 id="autonomous-circle"><a class="header" href="#autonomous-circle">Autonomous Circle</a></h3>
+<p>An Autonomous Circle is like a project which holds all required information, resources and knowledge required to operationally manage an IT environment. An example could be an AI based Application or a Private Blockchain.</p>
+<p>An Autonomous Circle is owned by one or more 3Bots. A consensus criteria can be defined which means that important changes in the project need consensus of the stakeholders. The co-owners of an Autonomous Circle can create an optional treasury of financial assets (money). The co-owners together own the treasury, the treasury can be used to reward the members of the circles for contribution or pay for the resources as used in the AI Cloud.</p>
+<p>Autonomous Circles are kept healthy thanks to the knowledge as owned by the 3Bots. The 3Bots will monitor and act if issues arise, this produces consensus driven management for cloud applications.</p>
+<h3 id="human-chain"><a class="header" href="#human-chain">Human Chain</a></h3>
+<p>The Human Chain concept is important to deliver a &quot;safe&quot; Autonomous AI System. A Human Chain functions similarly to a blockchain but rather than relying on a smart contract to execute a consensus mechanism, it ensures human stakeholders maintain complete visibility into the operation and modification requests. Humans have total awareness of all ongoing activities and, as a collective, can effect changes in the deployment upon reaching a consensus.</p>
+<p>A Human Chain is the combination of a certain number of 3Bots co-owning an Autonomous Circle. The Co-owners of such a project own the Human Chain and validate all transactions as executed on behalf of the Autonomous Circle. If consensus cannot be reached, the required transactions will not be accepted by the rest of the ecosystem. A Human Chain can also secure a treasury of money.</p>
+<p>While we don't foresee AI becoming conscious and posing a global threat in the near future, we do acknowledge that AI systems are potent tools. These tools can be misused by hackers, or errors can occur, leading to serious consequences, this is where a Human Chain can help.</p>
+<h1 id="some-of-the-benefits"><a class="header" href="#some-of-the-benefits">SOME OF THE BENEFITS</a></h1>
+<h2 id="deterministic-deployments"><a class="header" href="#deterministic-deployments">Deterministic Deployments</a></h2>
+<p>The system is able to build the required software (e.g. AI Application) in a secure and deterministic way. The build systems are run autonomously but still controlled by a Human Chain.</p>
+<p>Once consensus achieved, builds verified they will be deployed using our Tamper Proof system which makes sure that the build will always correspond to the reality. No hacker or alternative system will be able to influence how applications get deployed on the AI Grid.</p>
+<h2 id="private-ai"><a class="header" href="#private-ai">Private AI</a></h2>
+<p>The concept of Private AI facilitates safer and more confidential data processing by AI systems. It enables the processing of vast amounts of data in such a manner that human access is either eliminated or, if necessary, granted in a highly controlled way through blockchain mechanisms.</p>
+<p>Take the instance of security camera footage processing. The challenge lies in allowing AI to handle all the processing while ensuring that the same information remains inaccessible to hackers or compromised security personnel.</p>
+<h2 id="edge-ai"><a class="header" href="#edge-ai">Edge AI</a></h2>
+<p>Occasionally, it's more practical to transport the AI application to the data's location instead of vice versa. For instance, consider security cameras and AI image processing. Picture the ability to deploy a new AI application across thousands of cameras simultaneously in just a minute, delivering insights more quickly and securely. New approaches are required to realize this potential.</p>
+<h2 id="rapid-start"><a class="header" href="#rapid-start">Rapid Start</a></h2>
+<p>Deploy your AI workload much faster without having to copy as much data. Certain AI workloads can be sizable (many Gigabytes), it can take a long time for these workloads to be deployed especially if AI will be used in an Edge AI Context. Systems which otherwise would take 30 min to be deployed we can do in less than 1 minute.</p>
+<h2 id="tamper-proof"><a class="header" href="#tamper-proof">Tamper Proof</a></h2>
+<p>Deploy your AI workloads in such a way that no-one can modify the intended result. Even if only as much as 1 bit would be changed between time of build and deployment Zero-OS will refuse to start the application.</p>
+<h2 id="quantum-safe-storage"><a class="header" href="#quantum-safe-storage">Quantum Safe Storage</a></h2>
+<p>Our QSS allows data to be stored in such a way that data can never be lost nor corrupted. Not even a quantum computer can get access to the information.</p>
+<h2 id="aikube"><a class="header" href="#aikube">AIKube</a></h2>
+<p>Private Kubernetes as a service fully integrated with GPU drivers, setup new workloads in no time. This allows system administrators to use all their favorite tools.</p>
+<h1 id="the-role-of-quantum-safe-storage-for-ai"><a class="header" href="#the-role-of-quantum-safe-storage-for-ai">THE ROLE OF QUANTUM SAFE STORAGE FOR AI</a></h1>
+<p><img src="tfcloud/techvision/img/techvision_5.png" alt="image alt text" /></p>
+<p>Imagine a storage system with the following benefits:</p>
+<ul>
+<li>
+<p>up to 10x more efficient (power and usage of hardware) for certain workloads</p>
+</li>
+<li>
+<p>ultra reliable, data can not be lost</p>
+</li>
+<li>
+<p>ultra safe &amp; private</p>
+</li>
+<li>
+<p>ultra scalable</p>
+</li>
+<li>
+<p>sovereign, data is close to you in the country of your choice</p>
+</li>
+<li>
+<p>true Peer To Peer, by everyone for everyone.</p>
+</li>
+<li>
+<p>not even a quantum computer can hack the storage</p>
+</li>
+</ul>
+<p>It is not a dream, it does already exist.</p>
+<p>Our storage architecture follows a true distributed design. Participating nodes (can be on ultra safe locations) only store small incomplete parts of data (files, photos, movies, databases…) by only offering a slice of their current (local) storage devices. Managing the storage and retrieval of all these ‘distributed fragments’ is done by a software that creates ‘development and/or end-user interfaces’ for this storage algorithm. We call this ‘dispersed storage‘.</p>
+<p>The user has complete control over where the data is stored and which level of redundancy which is required.</p>
+<p>A storage system like this is very useful for an AI system, large datasets can be ingested or large language models loaded more quickly. We can even thin provision these language models to be even more efficient.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ourworld-venture-creator"><a class="header" href="#ourworld-venture-creator">OurWorld Venture Creator</a></h1>
+<p>OurWorld is a venture creator based in Mauritius who is finalizing its fundraise of 20-30 million EUR to empower our startups to manifest the required solutions aligned with our vision. </p>
+<p>These startups have access to Mycelium, a decentralized technology platform designed to enable conscious peer-to-peer collaboration. Mycelium provides the infrastructure for startups in the OurWorld ecosystem to develop transformative solutions, from finance to education. By combining funding, an ethical framework, and decentralized technologies, OurWorld aims to seed startups poised to make a positive societal impact. The versatile Mycelium platform allows this worldwide network of startups to exchange value and collectively upgrade how we cooperate.</p>
+<p><strong>THE OURWORLD VISION</strong></p>
+<p>Our Modern Crisis:</p>
+<ul>
+<li>Centralized AI and data platforms lack transparency and accountability. 
+This raises concerns about manipulating users or limiting their agency.</li>
+<li>Erosion of privacy and bodily autonomy through invasive surveillance and social credit systems. This endangers freedom of choice and expression.</li>
+<li>Environmental degradation that threatens sustainability of natural systems humanity depends on.</li>
+<li>Proliferation of misinformation that polarizes society. 
+This impedes reasoned discourse and collective problem-solving.</li>
+</ul>
+<p>These interconnected crises endanger the future – yet also present an opportunity for transformation. Business as usual will not suffice. Fundamental upgrades are needed across society.</p>
+<p>Guiding Principles for Change (Planet and People First)</p>
+<ul>
+<li><strong>Consciousness -</strong> Cultivate self-awareness, ethics and wisdom within each person.</li>
+<li><strong>Compassion -</strong> Practice understanding, service and sharing. Choose collaboration over division. </li>
+<li><strong>Sustainability -</strong> Incentivize regeneration. Safeguard ecosystems for future generations. </li>
+<li>**Autonomy **- Honor rights to self-determination and sovereignty. Prevent authoritarian overreach.</li>
+<li>**Meritocracy **- Structure governance to draw on diverse expertise while limiting corrupt influence.</li>
+<li>**Abundance - **Innovate systems that create shared prosperity through new economic models. </li>
+</ul>
+<p>Tools:</p>
+<ul>
+<li>
+<p><strong>Decentralization -</strong> Develop decentralized peer-to-peer networks for data, finance, communications, etc. This distributes power more equitably without centralized intermediaries.</p>
+</li>
+<li>
+<p>**Promote Education **that fosters critical thinking, self-awareness, and ethical values. This empowers individuals to make wise choices despite manipulative messaging.</p>
+</li>
+<li>
+<p><strong>Connect people</strong> across divides to find common ground. This fosters societal cohesion and collective wisdom to address shared challenges.</p>
+</li>
+<li>
+<p><strong>Design economic models</strong> that incentivize regeneration, compassion and creativity over self-interest. This creates abundance and reduces inequality.</p>
+</li>
+<li>
+<p>Champion <strong>open collaboration</strong> on solutions that benefit all of humanity and the planet. This unites us in shared purpose (opensource)</p>
+</li>
+<li>
+<p><strong>Support</strong> individual and community rights to self-determination and bodily <strong>sovereignty</strong>. This prevents authoritarian overreach and protects freedoms.</p>
+</li>
+</ul>
+<p>Everyone has a role to play in this transformation. We must lift up humanity by elevating consciousness, enacting wise governance, developing ethical technologies, and coming together in good faith. The answers exist if we dare to dream widely and act boldly.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="mermaid.min.js"></script>
+        <script src="mermaid-init.js"></script>
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
