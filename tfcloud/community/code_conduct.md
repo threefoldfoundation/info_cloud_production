@@ -1,3 +1,5 @@
+![](img/codeconduct.png)
+
 ## Forum Code of Conduct 
 
 ### Our Forum, Our Home
