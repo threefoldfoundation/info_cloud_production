@@ -112,9 +112,6 @@ Deploy your AI workloads in such a way that no-one can modify the intended resul
 
 Our QSS allows data to be stored in such a way that data can never be lost nor corrupted. Not even a quantum computer can get access to the information.
 
-## AIKube
-
-Private Kubernetes as a service fully integrated with GPU drivers, setup new workloads in no time. This allows system administrators to use all their favorite tools.
 
 # THE ROLE OF QUANTUM SAFE STORAGE FOR AI
 
@@ -123,17 +120,11 @@ Private Kubernetes as a service fully integrated with GPU drivers, setup new wor
 Imagine a storage system with the following benefits:
 
 * up to 10x more efficient (power and usage of hardware) for certain workloads
-
 * ultra reliable, data can not be lost
-
 * ultra safe & private
-
 * ultra scalable
-
 * sovereign, data is close to you in the country of your choice
-
 * true Peer To Peer, by everyone for everyone.
-
 * not even a quantum computer can hack the storage
 
 It is not a dream, it does already exist.
