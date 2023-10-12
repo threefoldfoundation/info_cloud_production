@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>OurWorld Venture Creator - ThreeFold Cloud Internal</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../../tfcloud/intro/intro.html">Intro</a></li><li class="chapter-item "><a href="../../tfcloud/community/collaboration.html">Collaboration</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tfcloud/community/code_conduct.html">Code of Conduct</a></li><li class="chapter-item "><a href="../../tfcloud/community/community_tools.html">Community Tools</a></li></ol></li><li class="chapter-item "><a href="../../tfcloud/cloud_features/products.html">Products</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tfcloud/cloud_features/features.html">Features</a></li><li class="chapter-item "><a href="../../tfcloud/cloud_features/values.html">Values</a></li><li class="chapter-item "><a href="../../tfcloud/cloud_features/autonomous_it.html">Autonomous_it</a></li></ol></li><li class="chapter-item "><a href="../../tfcloud/tfgrid/tfgrid.html">OpenSource TFGrid</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tfcloud/tfgrid/v40/40.html">TFGrid 4.0</a></li><li class="chapter-item "><a href="../../tfcloud/tfgrid/v40/alltrust.html">All Trust</a></li><li class="chapter-item "><a href="../../tfcloud/tfgrid/decentralization.html">Decentralization</a></li><li class="chapter-item "><a href="../../tfcloud/tfgrid/v40/guardian.html">Guardians</a></li><li class="chapter-item "><a href="../../tfcloud/tfgrid/tokenomics_tfgrid.html">Tokenomics</a></li><li class="chapter-item "><a href="../../tfcloud/tfgrid/roadmap_tfgrid.html">Roadmap</a></li></ol></li><li class="chapter-item "><a href="../../tfcloud/mycelium/mycelium.html">Mycelium</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tfcloud/mycelium/mycelium_roadmap.html">Roadmap Mycelium</a></li><li class="chapter-item "><a href="../../tfcloud/mycelium/mycelium_components.html">Components</a></li><li class="chapter-item "><a href="../../tfcloud/mycelium/mycelium_faq.html">FAQ</a></li></ol></li><li class="chapter-item "><a href="../../tfcloud/techvision/techvision.html">Tech Vision</a></li><li class="chapter-item expanded "><a href="../../tfcloud/ourworld/ourworld_venture_creator.html" class="active">OurWorld Venture Creator</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">ThreeFold Cloud Internal</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="ourworld-venture-creator"><a class="header" href="#ourworld-venture-creator">OurWorld Venture Creator</a></h1>
+<p>OurWorld is a venture creator based in Mauritius who is finalizing its fundraise of 20-30 million EUR to empower our startups to manifest the required solutions aligned with our vision. </p>
+<p>These startups have access to ThreeFold Technology as well as the full Mycelium ecosystem, a decentralized technology platform designed to enable conscious peer-to-peer collaboration. Mycelium provides the infrastructure for startups in the OurWorld ecosystem to develop transformative solutions, from finance to education. By combining funding, an ethical framework, and decentralized technologies, OurWorld aims to seed startups poised to make a positive societal impact. The versatile Mycelium platform allows this worldwide network of startups to exchange value and collectively upgrade how we cooperate.</p>
+<blockquote>
+<p>OurWorld received a termsheet for 20m EUR investment, the first 10m EUR is expected &lt; 3 months. Investments will happen in the Digital Freezone, TF Tech as well as TF Cloud</p>
+</blockquote>
+<p><strong>THE OURWORLD VISION</strong></p>
+<p>Our Modern Crisis:</p>
+<ul>
+<li>Centralized AI and data platforms lack transparency and accountability. 
+This raises concerns about manipulating users or limiting their agency.</li>
+<li>Erosion of privacy and bodily autonomy through invasive surveillance and social credit systems. This endangers freedom of choice and expression.</li>
+<li>Environmental degradation that threatens sustainability of natural systems humanity depends on.</li>
+<li>Proliferation of misinformation that polarizes society. This impedes reasoned discourse and collective problem-solving.</li>
+</ul>
+<p>These interconnected crises endanger the future – yet also present an opportunity for transformation. Business as usual will not suffice. Fundamental upgrades are needed across society.</p>
+<p>Guiding Principles for Change (Planet and People First)</p>
+<ul>
+<li><strong>Consciousness</strong> - Cultivate self-awareness, ethics and wisdom within each person.</li>
+<li><strong>Compassion</strong> - Practice understanding, service and sharing. Choose collaboration over division. </li>
+<li><strong>Sustainability</strong> - Incentivize regeneration. Safeguard ecosystems for future generations. </li>
+<li><strong>Autonomy</strong> - Honor rights to self-determination and sovereignty. Prevent authoritarian overreach.</li>
+<li><strong>Meritocracy</strong> - Structure governance to draw on diverse expertise while limiting corrupt influence.</li>
+<li><strong>Abundance</strong> - Innovate systems that create shared prosperity through new economic models. </li>
+</ul>
+<p>Tools:</p>
+<ul>
+<li><strong>Decentralization</strong> Develop decentralized peer-to-peer networks for data, finance, communications, etc. This distributes power more equitably without centralized intermediaries.</li>
+<li><strong>Promote Education</strong> that fosters critical thinking, self-awareness, and ethical values. This empowers individuals to make wise choices despite manipulative messaging.</li>
+<li><strong>Connect people</strong> across divides to find common ground. This fosters societal cohesion and collective wisdom to address shared challenges.</li>
+<li><strong>Design economic models</strong> that incentivize regeneration, compassion and creativity over self-interest. This creates abundance and reduces inequality.</li>
+<li>Champion <strong>open collaboration</strong> on solutions that benefit all of humanity and the planet. This unites us in shared purpose (opensource)</li>
+<li><strong>Support</strong> individual and community rights to self-determination and bodily <strong>sovereignty</strong>. This prevents authoritarian overreach and protects freedoms.</li>
+</ul>
+<p>Everyone has a role to play in this transformation. We must lift up humanity by elevating consciousness, enacting wise governance, developing ethical technologies, and coming together in good faith. The answers exist if we dare to dream widely and act boldly.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../tfcloud/techvision/techvision.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../tfcloud/techvision/techvision.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../../mermaid.min.js"></script>
+        <script src="../../mermaid-init.js"></script>
+
+
+    </div>
+    </body>
+</html>
