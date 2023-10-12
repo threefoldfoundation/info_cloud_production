@@ -30,5 +30,16 @@ Furthermore, this expansion is not just about introducing new services. It also 
 
 In essence, this period marks a transformative phase for ThreeFold Cloud. With a combination of fundraising, team expansion, and system upgrades, we're setting the stage for a more robust, efficient, and rewarding cloud ecosystem for all our stakeholders.
 
+### TFGrid getting ready to move out of the house.
 
+TFCloud is committed to help mature TFGrid 4.x and as such allow the TFGrid to become completely independent of TFCloud and TFTech. We expect this might happen mid to end of 2024 and will depend a lot on the colaboration of the community.
 
+This means
+
+- all works P2P (peer2peer)
+- an independent network of multiple guardian circles takes over the management and voting is used to decide on all relevant topics
+- all code is verified by community independent of TFCloud / TFTech.
+
+Basically, the ThreeFold Grid Baby is becoming and adult and ready to move out of the house.
+
+Read more about it in our TFGrid section.
