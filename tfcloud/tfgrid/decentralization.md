@@ -35,3 +35,24 @@ Decentralization, in our view, isn't solely about employing blockchain technolog
 - (5) there are 9 Guardians, 6 need to approve (TODO, double check)
 - (6) they would have to re-engineer how ZOS works and tells TFChain, but human chain = guardians can still see, we are planning to make this 100x more difficult in V4.0. If a hacker succeeds they would basically receive tokens which are not really earned. This is probably not possible on certified node, because of silicon route of trust with protected bios.
 - (7) TF Cloud is operating a kubernetes cluster to run some of these services. In v3.13 we expect more farmers to run this independently
+
+
+## V4.x the first 100% independent grid deployment
+
+> mid to end 2024
+
+- Run Independently means
+   - less than 20% of the validators or other tech components should be managed by TFTech or TFCloud
+   - less than 20% of the guardians are linked to  TFTech or TFCloud
+   - guardians will have to decide on upgrades of 3nodes linked to their regional internet
+- Anyone community in the world can run their own regional Internet without any help of TFCloud/TFTech.
+- This basically means if TFTech and TFCloud would no longer exist and community has interest to keep on funding the project, then the project can continue by itself. 
+
+Following features make sure the grid can get to full independance.
+
+- peer2peer billing & payment
+- peer2peer deployments
+- peer2peer farmering cooperative (group farmers to become more effective)
+- compatibility with major money blockchains
+
+
