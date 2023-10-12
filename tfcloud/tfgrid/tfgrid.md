@@ -13,7 +13,7 @@ The opensource grid is an opensource movement, TFTech an TFCloud are 2 sponsors 
 
 # TFTech
 
-- codes most of the opensource software as used in the TFGrid
+- develops most of the opensource software as used in the TFGrid
 - contributes all this code 
 - support is best effort
 - TFTech sells commercial licenses to help companies, governments and enterprises to make most out of the code.

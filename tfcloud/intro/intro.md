@@ -32,6 +32,8 @@ In essence, this period marks a transformative phase for ThreeFold Cloud. With a
 
 ### TFGrid getting ready to move out of the house.
 
+TFGrid is an opensource infrastructure platform and TFCloud is a proud promotor and contributor.
+
 TFCloud is committed to help mature TFGrid 4.x and as such allow the TFGrid to become completely independent of TFCloud and TFTech. We expect this might happen mid to end of 2024 and will depend a lot on the colaboration of the community.
 
 This means
