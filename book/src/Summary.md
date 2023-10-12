@@ -1,9 +1,6 @@
 # [**Cloud**](tfcloud/intro/intro.md)
 
 - [Intro](tfcloud/intro/intro.md)
-- [Collaboration](tfcloud/community/collaboration.md)
-    - [Code of Conduct](tfcloud/community/code_conduct.md)
-    - [Community Tools](tfcloud/community/community_tools.md)
 - [Products](tfcloud/cloud_features/products.md)
     - [Features](tfcloud/cloud_features/features.md)
     - [Values](tfcloud/cloud_features/values.md)
@@ -21,3 +18,8 @@
     - [FAQ](tfcloud/mycelium/mycelium_faq.md)
  - [Tech Vision](tfcloud/techvision/techvision.md)
  - [OurWorld Venture Creator](tfcloud/ourworld/ourworld_venture_creator.md)
+ - [Collaboration](tfcloud/community/collaboration.md)
+    - [Code of Conduct](tfcloud/community/code_conduct.md)
+
+
+    <!-- - [Community Tools](tfcloud/community/community_tools.md) -->
