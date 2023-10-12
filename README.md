@@ -1,6 +1,6 @@
 # Internal manual for ThreeFold Cloud
 
-> see [https://threefoldfoundation.github.io/info_cloud_production/](https://threefoldfoundation.github.io/info_cloud_production/intro/intro.html)
+> see [https://threefoldfoundation.github.io/info_cloud_production/tfcloud/intro/intro.html](https://threefoldfoundation.github.io/info_cloud_production/tfcloud/intro/intro.html)
 
 ## To Develop 
 
