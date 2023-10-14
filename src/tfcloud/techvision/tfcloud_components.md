@@ -1,5 +1,5 @@
 
-<h1> TFCloud Components</h1>
+<h1>Components</h1>
 
 <h2>Table of Contents</h2>
 

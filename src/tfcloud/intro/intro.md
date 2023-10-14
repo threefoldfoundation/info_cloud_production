@@ -14,7 +14,7 @@
 - [Products](../../tfcloud/cloud_features/products.md)
 - [Open-Source TFGrid](../../tfcloud/tfgrid/tfgrid.md)
 - [Mycelium](../../tfcloud/mycelium/mycelium.md)
-- [Tech Vision](../../tfcloud/techvision/techvision.md)
+- [Vision](../../tfcloud/techvision/tfcloud_vision.md)
 - [OurWorld Venture Creator](../../tfcloud/ourworld/ourworld_venture_creator.md)
 - [Collaboration](../../tfcloud/community/collaboration.md)
 

@@ -1,5 +1,5 @@
 
-<h1> TFCloud Benefits</h1>
+<h1>Benefits</h1>
 
 <h2>Table of Contents</h2>
 

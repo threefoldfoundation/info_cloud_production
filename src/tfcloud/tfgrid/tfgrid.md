@@ -1,4 +1,4 @@
-<h1> Open-Source Movement</h1>
+<h1> Open-Source TFGrid</h1>
 
 ![](img/opensourcegrid.png)
 
