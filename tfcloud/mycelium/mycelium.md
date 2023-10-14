@@ -3,17 +3,18 @@
 
 # Mycelium: A Platform for Conscious Decentralization
 
-> Mycelium runs on top of the TFGrid which is opensource Internet Infrastructure platform.
+Mycelium has as purpose to restore the Internet to its original glory, a true Peer2Peer platform
+capable to expand our collective consciousness. Mycelium allows human networks to flourish without centralized intermediaries.
 
-Mycelium is a Internet Platform designed to become smarter and more creative together and expand collective consciousness. Built on proven technologies, Mycelium allows peer-to-peer networks to flourish without centralized intermediaries.
+Mycelium uses the ThreeFold Grid as its base capacity cloud layer (storage, compute, network) which is opensource Internet Infrastructure platform.
 
-Mycelium has no central point of control. The voluntary nodes forming the Mycelium network are operated by individuals and communities who share resources and capabilities to manifest a common vision. This structure aligns with principles of decentralization and autonomy.
+Mycelium has no central point of control. Community provided nodes forming the Mycelium network are operated by individuals and communities who share resources and capabilities to manifest a common vision. 
 
 Rich capabilities empower users to connect, communicate, transact and collaborate while retaining ownership of their own data and digital identities. Features like self-sovereign identity and encrypted communications enhance privacy and user agency.
 
 Incentive structures reward conscious contributions that regenerate communities and the planet. The Mycelium ecosystem cultivates an ethos of compassion, sustainability and abundance.
 
-With Mycelium, we can rebuild critical systems - from currency to culture - in a more decentralized, conscious manner. Mycelium provides the infrastructure for a digitally-connected society aligned with our highest values. 
+With Mycelium, we can rebuild critical systems - from currency to culture - in a more decentralized, conscious manner. Mycelium provides a programmeable, affordable, secure and ultra scalable layer for a digitally-connected society aligned with our highest values. 
 
 **A worldwide web of compassion is within reach if we take up the challenge.**
 
