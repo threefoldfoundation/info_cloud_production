@@ -1,5 +1,15 @@
 
+<h1> Autonomous IT </h1>
 
+<h2>Table of Contents</h2>
+
+- [The Cloud Lifecycle](#the-cloud-lifecycle)
+  - [1. Objective](#1-objective)
+  - [2. Reality State](#2-reality-state)
+  - [3. Change Request](#3-change-request)
+- [3Bot Execution](#3bot-execution)
+
+***
 
 ## The Cloud Lifecycle
 
@@ -9,7 +19,7 @@ Here's how it works:
 
 ThreeFold Cloud introduces a groundbreaking approach to autonomous cloud management, underpinned by three core concepts that ensure seamless operation and user control. The 3 core concepts:
 
-### 1. Objective:
+### 1. Objective
 
 Definition: 
 
@@ -22,13 +32,13 @@ Visualization:
 * This wished state can be visualized as a sort of wiki system (looks like an searchable ebook with nice graphics), allowing users to easily comprehend their specified objectives.
 
 
-### 2. Reality State:
+### 2. Reality State
 
 Function: The 3Bot constantly assesses the current state of the cloud resources, termed the 'reality state'. It evaluates the existing setup, such as the presence of a virtual data center or the uptime of services, and contrasts this with the user's wished state. This may often result in change requests.
 
 Then querying of the reality state is also done through 3script and allows full auditing and logging of requested information and its result. 3script is human readable and easy to understand by AI systems.
 
-### 3. Change Request:
+### 3. Change Request
 
 Change Request Creation: If discrepancies arise between the wished and reality states, the 3Bot calculates these differences and formulates a 'change request'.
 
@@ -40,7 +50,7 @@ The change request can even be submitted to a DAO or another consensus driven de
 
 The 3Bot will continuously check objective vs reality state and create change requests, which can be automatically executed or checked by humans.
 
-## 3Bot executes above concept
+## 3Bot Execution
 
 The 3Bot, equipped to integrate with both Web2 and Web3, carries out these actions, aligning the reality with the wished state. It continually compares the two states, and if any variance is detected, such as a website being down, the 3Bot diagnoses the issue, formulates corrective actions, and generates new change requests.
 

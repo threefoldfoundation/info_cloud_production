@@ -1,17 +1,27 @@
 
+<h1> Decentralization </h1>
+
 ![](img/decentralization.png)
 
-# Decentralization
+<h2>Table of Contents</h2>
+
+- [Introduction](#introduction)
+- [V3.11](#v311)
+- [V4.x](#v4x)
+
+***
+
+## Introduction
 
 Decentralization, in our view, isn't solely about employing blockchain technology everywhere. Instead, we envision it as the culmination of a global community collaborating transparently, sharing everything they do, and actively seeking feedback. Our goal is to ensure that the platform we deploy operates in the most distributed and decentralized manner possible.
 
-## v 3.11
+## V3.11
 
-| descr                                                      | good enough (1) | remark                                                                                                |
+| Description                                                      | Good Enough (1) | Remark                                                                                                |
 | ---------------------------------------------------------- | --------------- | ----------------------------------------------------------------------------------------------------- |
 | 3Nodes owned and invested by Independent Farmers           | Yes             | less than 10% owned by ThreeFold Cloud/Dubai                                                          |
 | open documentation & feedback                              | Yes             | all opensource on github, anyone can contribute and give feedback, whcih does happen quite well       |
-| transparancy and input on any change to do with tokenomics | yes             | see the discussions on forum (3) and GEP's process                                                    |
+| transparancy and input on any change to do with tokenomics | Yes             | see the discussions on forum (3) and GEP's process                                                    |
 | transparancy about tokens, history                         | Yes             | see wiki (2) which is also on github, a lot of info
 | TFChain deployment                                         | No              | too few run the validator stack, we need more validators                                              |
 | Code Development                                           | No              | +90% done by TFTech , we need more participants                                                       |
@@ -37,7 +47,9 @@ Decentralization, in our view, isn't solely about employing blockchain technolog
 - (7) TF Cloud is operating a kubernetes cluster to run some of these services. In v3.13 we expect more farmers to run this independently
 
 
-## V4.x the first 100% independent grid deployment
+## V4.x 
+
+With V4.x, we aim at the first 100% independent grid deployment.
 
 > mid to end 2024
 

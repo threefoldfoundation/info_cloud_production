@@ -1,12 +1,16 @@
+<h1>TFGrid 4.0 Roadmap</h1>
+
 ![](img/roadmap.png)
 
+## Introduction
 
-# roadmap TFGrid 4.0
+This section covers the TFGrid 4.0 roadmap. Stay tuned for more information on this.
 
-## V4.0
+## TFGrid 4.0 Roadmap Overview
 
-- no more TFChain, many peer2peer features
-- features as descrived in [v4.0](v40/40.md)
-- concepts as described in [all trust document](v40/alltrust.md).
+- No more TFChain
+- Many peer-to-peer features
+- Features as descrived in [v4.0](v40/40.md)
+- Concepts as described in [all trust document](v40/alltrust.md).
 
-> TO BE COMPLETED
+> Note: More information will follow

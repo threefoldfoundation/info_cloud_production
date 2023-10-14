@@ -1,6 +1,19 @@
-<h1>ThreeFold Cloud Resources</h1>
+<h1>TFCloud Resources</h1>
+
+<h2>Table of Contents</h2>
+
+- [Introduction](#introduction)
+- [Resource References](#resource-references)
+- [Disclaimer](#disclaimer)
+- [Support](#support)
+
+***
+
+## Introduction
 
 There are already many great resources and communities revolving around ThreeFold Cloud. We invite everyone willing to contribute honestly with integrity, based on our code of conducts, to participate and build the cloud with us.
+
+## Resource References
 
 - [ThreeFold Forum](https://forum.threefold.io/)
   - Supported by TFCloud

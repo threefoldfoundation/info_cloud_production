@@ -1,7 +1,16 @@
 
-# FAQ
+<h1> Mycelium FAQ </h1>
 
-## Is this a blockchain or crypto project
+<h2> Table of Contents </h2>
+
+- [Is this a blockchain or crypto project?](#is-this-a-blockchain-or-crypto-project)
+- [Is this realistic?](#is-this-realistic)
+- [When will we have it?](#when-will-we-have-it)
+- [How does Mycelium compare to?](#how-does-mycelium-compare-to)
+
+***
+
+## Is this a blockchain or crypto project?
 
 NO, we are compatible with many blockchains but we don’t rely on them. We believe peer2peer and consensus driven decision systems with bridges to other blockchains are more powerful and way more scalable, secure and efficient.
 

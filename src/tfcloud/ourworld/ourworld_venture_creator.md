@@ -1,4 +1,18 @@
-# OurWorld Venture Creator
+<h1> OurWorld Venture Creator </h1>
+
+![](img/ourworld.png)
+
+<h2> Table of Contents </h2>
+
+- [Introduction](#introduction)
+- [OurWorld Vision](#ourworld-vision)
+  - [Our Modern Crisis](#our-modern-crisis)
+  - [Guiding Principles for Change](#guiding-principles-for-change)
+  - [Tools](#tools)
+
+***
+
+## Introduction
 
 OurWorld is a venture creator based in Mauritius who is finalizing its fundraise of 20-30 million EUR to empower our startups to manifest the required solutions aligned with our vision. 
 
@@ -6,9 +20,11 @@ These startups have access to ThreeFold Technology as well as the full Mycelium 
 
 > OurWorld received a termsheet for 20m EUR investment, the first 10m EUR is expected < 3 months. Investments will happen in the Digital Freezone, TF Tech as well as TF Cloud
 
-**THE OURWORLD VISION**
+## OurWorld Vision
 
-Our Modern Crisis:
+OurWorld has a vision that is inspired by guiding principles and possesses the tools necessary to fix many issues of our current modern crisis.
+
+### Our Modern Crisis
 
 * Centralized AI and data platforms lack transparency and accountability. 
 This raises concerns about manipulating users or limiting their agency.
@@ -18,7 +34,9 @@ This raises concerns about manipulating users or limiting their agency.
 
 These interconnected crises endanger the future – yet also present an opportunity for transformation. Business as usual will not suffice. Fundamental upgrades are needed across society.
 
-Guiding Principles for Change (Planet and People First)
+### Guiding Principles for Change 
+
+The guiding principles for change of OurWorld always put the planet and people first.
 
 * **Consciousness** - Cultivate self-awareness, ethics and wisdom within each person.
 * **Compassion** - Practice understanding, service and sharing. Choose collaboration over division. 
@@ -28,7 +46,7 @@ Guiding Principles for Change (Planet and People First)
 * **Abundance** - Innovate systems that create shared prosperity through new economic models. 
 
 
-Tools:
+### Tools
 
 * **Decentralization** Develop decentralized peer-to-peer networks for data, finance, communications, etc. This distributes power more equitably without centralized intermediaries.
 * **Promote Education** that fosters critical thinking, self-awareness, and ethical values. This empowers individuals to make wise choices despite manipulative messaging.

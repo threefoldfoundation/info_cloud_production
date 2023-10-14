@@ -1,6 +1,13 @@
-## Planned Products
+<h1> Planned Products </h2>
 
-### Q1 2024
+<h2>Table of Contents</h2>
+
+- [Q1 2024](#q1-2024)
+- [Q2 2024](#q2-2024)
+
+***
+
+## Q1 2024
 
 * Mycelium - Become a Publisher on our New Internet:
   * Remember the early days of the internet ...
@@ -13,7 +20,7 @@
     * With 3Bot, deploying solutions on the cloud becomes a breeze. Whether it's setting up a new website or launching a specific application, 3Bot streamlines the process, ensuring efficiency and reliability.
     * Learn how to develop using a 3Bot to create your own solutions running on the TFGrid.
 
-### Q2 2024
+## Q2 2024
 
 * Virtual Datacenters
     * Are the more advanced workloads allowing people to deploy any IT workload on the grid using state of the art self-healing management techniques.

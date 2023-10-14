@@ -1,7 +1,18 @@
 
-# ![image alt text](img/mycelium_2.png)
+<h1> Mycelium Roadmap</h1>
 
-# ROADMAP
+![image alt text](img/mycelium_2.png)
+
+<h2>Table of Contents</h2>
+
+- [v0.5 = minimal viable product for the beta tester early adopter](#v05--minimal-viable-product-for-the-beta-tester-early-adopter)
+- [v0.6 = Search + AI + BTC Lightening (Q1/Q2 2024)](#v06--search--ai--btc-lightening-q1q2-2024)
+- [v0.7 = Virtual Datacenter  (end Q1 2024)](#v07--virtual-datacenter--end-q1-2024)
+- [v0.8 = Developers for Digital Twin Experiences (end Q2 2024)](#v08--developers-for-digital-twin-experiences-end-q2-2024)
+- [V1.0 = more user friendly interaction (TBD)](#v10--more-user-friendly-interaction-tbd)
+- [V1.1 = metaverse extensions (TBD)](#v11--metaverse-extensions-tbd)
+
+***
 
 ## v0.5 = minimal viable product for the beta tester early adopter
 
@@ -74,6 +85,4 @@ End Q4 2023 a first version will be available to our early adoptors.
 * Metaverse (augmented reality, …) 
 
 
-### Internal Remarks
-
-- check see https://github.com/LicomJS/Licom for how they did comments plugin
+<!---  check see https://github.com/LicomJS/Licom for how they did comments plugin --->

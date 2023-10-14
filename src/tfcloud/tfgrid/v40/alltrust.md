@@ -1,7 +1,20 @@
+<h1>All Trust</h1>
+
 ![](img/alltrust.png)
 
+<h2>Table of Contents</h2>
 
-# A Paradigm of Trust
+- [A Paradigm of Trust](#a-paradigm-of-trust)
+- [Farmers: Investors in Shared Infrastructure](#farmers-investors-in-shared-infrastructure)
+- [Grid Services: Facilitating System Usage](#grid-services-facilitating-system-usage)
+- [Flexible Pricing Policies](#flexible-pricing-policies)
+- [IOUs Enable Trusted Transactions](#ious-enable-trusted-transactions)
+- [Guardian Circles: Humans Ensuring Oversight](#guardian-circles-humans-ensuring-oversight)
+- [Summary](#summary)
+
+***
+
+## A Paradigm of Trust
 
 What if instead of distrusting others, we embrace a paradigm of trust? The ThreeFold Grid 4.0 system is built on this principle of trust between all participants.
 

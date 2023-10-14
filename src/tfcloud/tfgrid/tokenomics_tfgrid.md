@@ -1,4 +1,6 @@
 
+<h1>TFGrid Tokenomics</h1>
+
 ![](img/tokenomics.png)
 
 ## TFGrid Tokenomics Upgrade
@@ -23,6 +25,6 @@ We are working on some fundamental changes which will achieve the following
 - Staking is a required for becoming a future Farmer or Farming Cooperative
 - P2P Billing and Payments will lead to using TFT for much more services, which will have positive impact as well.
 
-Some more info see [https://github.com/threefoldtech/home/issues/1448](https://github.com/threefoldtech/home/issues/1448) 
+> See: [https://github.com/threefoldtech/home/issues/1448](https://github.com/threefoldtech/home/issues/1448) 
 
 

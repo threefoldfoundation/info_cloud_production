@@ -1,14 +1,23 @@
 
-## Features
+<h1> Features </h1>
 
-### User-Friendly Design
+<h2>Table of Contents</h2>
+
+- [User-Friendly Design](#user-friendly-design)
+- [Interfaces](#interfaces)
+- [Autonomous Workloads](#autonomous-workloads)
+  - [Personal AI-Cloud Workload Example](#personal-ai-cloud-workload-example)
+
+***
+
+## User-Friendly Design
 
 ThreeFold Cloud is not just for tech-savvy individuals or expert system administrators. It's designed to be accessible and user-friendly, ensuring a broad range of IT users (people who administer applications in the cloud) can operate it with ease.
 
 We leapfrog the current state of the cloud, we emphasize simplicity of operation and avoid complicated user interfaces.
 
 
-### Interfaces
+## Interfaces
 
 * Chat Interface: 
     * The primary mode of interaction for most users will be the chat interface. This allows users to communicate with their 3Bot using conversational language. The system will be multilingual, accommodating users from various linguistic backgrounds.
@@ -21,7 +30,7 @@ We leapfrog the current state of the cloud, we emphasize simplicity of operation
     * For those looking to delve deeper and develop on the ThreeFold Cloud, there's an Application Programming Interface (API) available.
 
 
-### Autonomous Workloads
+## Autonomous Workloads
 
 The standout feature of ThreeFold Cloud is its emphasis on autonomous workloads. But what does that mean? Essentially, these are applications or software that operate on your behalf in the cloud. 
 
@@ -29,7 +38,7 @@ Examples range from basic websites to more complex systems like mail servers, CR
 
 Read the section [Autonomous IT](autonomous_it.md)
 
-#### Example workload is a personal AI-Cloud
+### Personal AI-Cloud Workload Example
 
 Within the ThreeFold Cloud ecosystem, a workload represents a specific set of tasks or operations that the system is designed to handle. One such example is the AICloud.
 

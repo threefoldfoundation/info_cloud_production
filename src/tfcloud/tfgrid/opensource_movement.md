@@ -1,3 +1,14 @@
+<h1>Open-Source Movement</h1>
+
+<h2>Table of Contents</h2>
+
+- [Introduction](#introduction)
+- [TFCloud](#tfcloud)
+- [TFTech](#tftech)
+- [Promise to 100% Independence of TFGrid](#promise-to-100-independence-of-tfgrid)
+
+***
+
 ## Introduction
 
 The open-source ThreeFold Grid is an open-source movement. TFTech and TFCloud are two sponsors of this project.
