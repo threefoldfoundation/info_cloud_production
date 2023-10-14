@@ -1,7 +1,7 @@
 
 ![](img/decentralization.png)
 
-# decentralization
+# Decentralization
 
 Decentralization, in our view, isn't solely about employing blockchain technology everywhere. Instead, we envision it as the culmination of a global community collaborating transparently, sharing everything they do, and actively seeking feedback. Our goal is to ensure that the platform we deploy operates in the most distributed and decentralized manner possible.
 
@@ -29,8 +29,8 @@ Decentralization, in our view, isn't solely about employing blockchain technolog
 
 
 - (1) This is our subjective evaluation and should not be construed as a guarantee or commitment. We welcome any differing opinions or feedback.
-- (2) [the wiki](https://library.threefold.me/info/threefold#/) 
-- (3) [the forum](https://forum.threefold.io/)
+- (2) [The wiki](https://library.threefold.me/info/threefold#/) 
+- (3) [The forum](https://forum.threefold.io/)
 - (4) [Github](https://github.com/threefoldtech), list of components see [here](https://github.com/threefoldtech/home/blob/master/wiki/components/components_overview.md)
 - (5) there are 9 Guardians, 6 need to approve (TODO, double check)
 - (6) they would have to re-engineer how ZOS works and tells TFChain, but human chain = guardians can still see, we are planning to make this 100x more difficult in V4.0. If a hacker succeeds they would basically receive tokens which are not really earned. This is probably not possible on certified node, because of silicon route of trust with protected bios.

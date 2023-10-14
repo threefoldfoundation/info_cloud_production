@@ -4,7 +4,7 @@
 
 * Mycelium - Become a Publisher on our New Internet:
   * Remember the early days of the internet ...
-  * see [mycelium](../mycelium/mycelium.md)
+  * [Read about Mycelium](../mycelium/mycelium.md)
 * BTC Lightning Nodes
     * Allowing users to engage in faster, more scalable Bitcoin transactions. This is crucial as the demand for efficient Bitcoin transactions grows. By utilizing the Lightning Network, users can benefit from reduced fees and near-instant transfers, making microtransactions and everyday Bitcoin usage more feasible.
 * 3Bot - Your Digital Assistant:

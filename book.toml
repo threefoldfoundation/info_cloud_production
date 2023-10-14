@@ -1,5 +1,5 @@
 [book]
-title = "ThreeFold Cloud Internal"
+title = "Introducing ThreeFold Cloud"
 
 [output.html.fold]
 enable = true

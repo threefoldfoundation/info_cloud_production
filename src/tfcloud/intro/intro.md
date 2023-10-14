@@ -8,6 +8,20 @@
 
 ***
 
+<h2>Main Sections</h2>
+
+- [Introduction](#introduction)
+- [Products](../../tfcloud/cloud_features/products.md)
+- [Open-Source TFGrid](../../tfcloud/tfgrid/tfgrid.md)
+- [Mycelium](../../tfcloud/mycelium/mycelium.md)
+- [Tech Vision](../../tfcloud/techvision/techvision.md)
+- [OurWorld Venture Creator](../../tfcloud/ourworld/ourworld_venture_creator.md)
+- [Collaboration](../../tfcloud/community/collaboration.md)
+
+***
+
+## Introduction
+
 Presently, dominant cloud platforms like Google, Amazon, and Microsoft are centralized. Yet, a significant portion of the global population remains underserved, lacking robust internet access as well as proximate data and computing resources.
 
 **Enter ThreeFold.** 
@@ -18,7 +32,7 @@ The uniqueness of the ThreeFold Grid lies in its decentralized ownership. Numero
 
 Based in Dubai, ThreeFold Cloud is now delivering services on top of this grid. Yet, it ensures that every user retains complete control and access to their deployed workloads.
 
-Read this book to learn more about ThreeFold Cloud and **get involve** within the ThreeFold community!
+Read this documentation to learn more about ThreeFold Cloud.
 
 ### ThreeFold DMCC: The Driving Force Behind ThreeFold Cloud
 
@@ -27,7 +41,6 @@ ThreeFold Cloud operates under the umbrella of ThreeFold DMCC, a company based i
 ThreeFold DMCC is not just our corporate identity: it's the hub from which we manage and operate essential community tools. This includes platforms like our dedicated forum, where users, developers, and enthusiasts can engage in meaningful discussions, share insights, and collaborate on projects. Additionally, our websites, which serve as the primary interface for our audience to learn about and interact with our offerings, are also managed from this central point.
 
 ThreeFold DMCC is the organizational backbone, ensuring smooth operations, community engagement, and the continuous scaling of the ThreeFold Grid.
-
 
 ### ThreeFold Cloud's Expansion and Fundraising Initiative
 
@@ -54,11 +67,3 @@ This means the following:
 
 Basically, the ThreeFold Grid, once a baby, is becoming an adult and is ready to move out of the house.
 
-<h2>Main Sections</h2>
-
-- [Products](../cloud_features/products.md)   
-- [Open-Source TFGrid](../tfgrid/tfgrid.md)
-- [Mycelium](../mycelium/mycelium.md)
-- [Tech Vision](../techvision/techvision.md)
-- [OurWorld Venture Creator](../ourworld/ourworld_venture_creator.md)
-- [Collaboration](../community/collaboration.md)
