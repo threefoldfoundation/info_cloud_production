@@ -1,6 +1,6 @@
-![](img/intro.png)
+![tfcloud_intro_picture](../../tfcloud/intro/img/intro.png)
 
-#  ThreeFold Cloud. 
+#  ThreeFold Cloud 
 
 The digital landscape is ready for a transformative cloud solution. Presently, dominant cloud platforms like Google, Amazon, and Microsoft are centralized. Yet, a significant portion of the global population remains underserved, lacking robust internet access and proximate data and computing resources.
 
