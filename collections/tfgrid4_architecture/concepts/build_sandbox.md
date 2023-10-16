@@ -9,7 +9,7 @@ The Chroot environment is run like an OCI compatible container.
 - build inside the sandbox
 - the result sandbox gets cleaned up (remove non wanted files)
 - export the sandbox to flist4 format
-- store the flist4 format on chosen S3 server
+- store the flist4 format on chosen S3 server or tfhub server
 - store the fileparts to chosen ZDB (future S3 server)
 
 Once 
