@@ -1,0 +1,282 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Features - ThreeFold Cloud</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../../tfcloud/intro/intro.html">Introduction</a></li><li class="chapter-item expanded "><a href="../../tfcloud/cloud_features/products.html">Products</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tfcloud/cloud_features/planned_products.html">Planned Products</a></li><li class="chapter-item expanded "><a href="../../tfcloud/cloud_features/features.html" class="active">Features</a></li><li class="chapter-item "><a href="../../tfcloud/cloud_features/values.html">Values</a></li><li class="chapter-item "><a href="../../tfcloud/cloud_features/autonomous_it.html">Autonomous IT</a></li></ol></li><li class="chapter-item "><a href="../../tfcloud/tfgrid/tfgrid.html">Open-Source TFGrid</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tfcloud/tfgrid/opensource_movement.html">Open-Source Movement</a></li><li class="chapter-item "><a href="../../tfcloud/tfgrid/v40/40.html">TFGrid 4.0</a></li><li class="chapter-item "><a href="../../tfcloud/tfgrid/v40/alltrust.html">All Trust</a></li><li class="chapter-item "><a href="../../tfcloud/tfgrid/decentralization.html">Decentralization</a></li><li class="chapter-item "><a href="../../tfcloud/tfgrid/v40/guardian.html">Guardians</a></li><li class="chapter-item "><a href="../../tfcloud/tfgrid/tokenomics_tfgrid.html">Tokenomics</a></li><li class="chapter-item "><a href="../../tfcloud/tfgrid/roadmap_tfgrid.html">Roadmap</a></li></ol></li><li class="chapter-item "><a href="../../tfcloud/mycelium/mycelium.html">Mycelium</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tfcloud/mycelium/mycelium_platform.html">Mycelium Platform</a></li><li class="chapter-item "><a href="../../tfcloud/mycelium/mycelium_roadmap.html">Roadmap Mycelium</a></li><li class="chapter-item "><a href="../../tfcloud/mycelium/mycelium_components.html">Components</a></li><li class="chapter-item "><a href="../../tfcloud/mycelium/mycelium_faq.html">FAQ</a></li></ol></li><li class="chapter-item "><a href="../../tfcloud/techvision/tfcloud_vision.html">Vision</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tfcloud/techvision/technology.html">Technology</a></li><li class="chapter-item "><a href="../../tfcloud/techvision/tfcloud_benefits.html">Benefits</a></li><li class="chapter-item "><a href="../../tfcloud/techvision/tfcloud_qss.html">Quantum Safe Storage</a></li><li class="chapter-item "><a href="../../tfcloud/techvision/tfcloud_components.html">Components</a></li></ol></li><li class="chapter-item "><a href="../../tfcloud/ourworld/ourworld_venture_creator.html">OurWorld Venture Creator</a></li><li class="chapter-item "><a href="../../tfcloud/community/collaboration.html">Collaboration</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tfcloud/community/tfcloud_resources.html">TFCloud Resources</a></li><li class="chapter-item "><a href="../../tfcloud/community/code_conduct.html">Code of Conduct</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">ThreeFold Cloud</h1>
+
+                    <div class="right-buttons">
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="features"><a class="header" href="#features"> Features </a></h1>
+<h2 id="table-of-contents"><a class="header" href="#table-of-contents">Table of Contents</a></h2>
+<ul>
+<li><a href="#user-friendly-design">User-Friendly Design</a></li>
+<li><a href="#interfaces">Interfaces</a></li>
+<li><a href="#autonomous-workloads">Autonomous Workloads</a>
+<ul>
+<li><a href="#personal-ai-cloud-workload-example">Personal AI-Cloud Workload Example</a></li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="user-friendly-design"><a class="header" href="#user-friendly-design">User-Friendly Design</a></h2>
+<p>ThreeFold Cloud is not just for tech-savvy individuals or expert system administrators. It's designed to be accessible and user-friendly, ensuring a broad range of IT users (people who administer applications in the cloud) can operate it with ease.</p>
+<p>We leapfrog the current state of the cloud, we emphasize simplicity of operation and avoid complicated user interfaces.</p>
+<h2 id="interfaces"><a class="header" href="#interfaces">Interfaces</a></h2>
+<ul>
+<li>Chat Interface: 
+<ul>
+<li>The primary mode of interaction for most users will be the chat interface. This allows users to communicate with their 3Bot using conversational language. The system will be multilingual, accommodating users from various linguistic backgrounds.</li>
+</ul>
+</li>
+<li>3Script - The Cloud Language:
+<ul>
+<li>Beyond conventional languages, ThreeFold Cloud introduces 3Script, a high-level cloud language. It's designed to be straightforward, with basic constructs that simplify the process of setting up and managing your cloud resources.</li>
+</ul>
+</li>
+<li>Voice:
+<ul>
+<li>The system will even understand your voice.</li>
+<li>Your personal AI system translates your voice to 3script and makes sure you have the best of both worlds, convenience of using your own spoken language and auditability of 3script.</li>
+</ul>
+</li>
+<li>API: 
+<ul>
+<li>For those looking to delve deeper and develop on the ThreeFold Cloud, there's an Application Programming Interface (API) available.</li>
+</ul>
+</li>
+</ul>
+<h2 id="autonomous-workloads"><a class="header" href="#autonomous-workloads">Autonomous Workloads</a></h2>
+<p>The standout feature of ThreeFold Cloud is its emphasis on autonomous workloads. But what does that mean? Essentially, these are applications or software that operate on your behalf in the cloud. </p>
+<p>Examples range from basic websites to more complex systems like mail servers, CRM systems, or AI-driven platforms. These applications function in a self-driving or autonomous mode, reducing the need for constant manual oversight.</p>
+<p>Read the section <a href="autonomous_it.html">Autonomous IT</a></p>
+<h3 id="personal-ai-cloud-workload-example"><a class="header" href="#personal-ai-cloud-workload-example">Personal AI-Cloud Workload Example</a></h3>
+<p>Within the ThreeFold Cloud ecosystem, a workload represents a specific set of tasks or operations that the system is designed to handle. One such example is the AICloud.</p>
+<p>The AICloud is a testament to ThreeFold Cloud's commitment to developing autonomous solutions. Instead of users having to delve into intricate details, specifying requirements like the exact virtual machine configurations, the platform simplifies the process. Users can express their needs in more intuitive terms. For instance, someone might say, &quot;I want an AI cloud equipped with the best chat interface.&quot;</p>
+<p>The AICloud is designed to be user-centric and adaptive. If a user provides a link containing specific information, the AICloud can ingest this data. This allows for the creation of a personalized chatbot, potentially powered by advanced models like GPT but private, trained specifically on the user's data. The result is a tailored AI chat solution, unique to each user's requirements.</p>
+<p>Such capabilities are not just theoretical; they are very much achievable. ThreeFold Cloud is actively working on making them accessible to users, emphasizing ease of use and customization.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../tfcloud/cloud_features/planned_products.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../../tfcloud/cloud_features/values.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../tfcloud/cloud_features/planned_products.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../tfcloud/cloud_features/values.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../../mermaid.min.js"></script>
+        <script src="../../mermaid-init.js"></script>
+
+
+    </div>
+    </body>
+</html>

@@ -1,4 +1,4 @@
 build:
-	mdbook build -d docs
+	mdbook build -d book
 serve:
-	mdbook serve -o -d docs -p 3004
+	mdbook serve -o -d book -p 3004
