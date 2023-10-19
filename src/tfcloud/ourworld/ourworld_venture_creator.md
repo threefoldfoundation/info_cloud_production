@@ -18,8 +18,6 @@ OurWorld is a venture creator based in Mauritius who is finalizing its fundraise
 
 These startups have access to ThreeFold Technology as well as the full Mycelium ecosystem, a decentralized technology platform designed to enable conscious peer-to-peer collaboration. Mycelium provides the infrastructure for startups in the OurWorld ecosystem to develop transformative solutions, from finance to education. By combining funding, an ethical framework, and decentralized technologies, OurWorld aims to seed startups poised to make a positive societal impact. The versatile Mycelium platform allows this worldwide network of startups to exchange value and collectively upgrade how we cooperate.
 
-> OurWorld received a termsheet for 20m EUR investment, the first 10m EUR is expected < 3 months. Investments will happen in the Digital Freezone, TF Tech as well as TF Cloud
-
 ## OurWorld Vision
 
 OurWorld has a vision that is inspired by guiding principles and possesses the tools necessary to fix many issues of our current modern crisis.
