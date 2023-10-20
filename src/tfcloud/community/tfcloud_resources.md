@@ -38,4 +38,4 @@ Please note that all efforts are made on a best-effort basis. Neither TFTech nor
 
 ## Support
 
-For support inquiries, please reach out to TFTech. They can provide a license and support agreement as needed.
+For support inquiries, please reach out to [TFTech](https://github.com/threefoldtech). They can provide a license and support agreement as needed.
