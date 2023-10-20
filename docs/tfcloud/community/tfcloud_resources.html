@@ -210,7 +210,7 @@
 <h2 id="disclaimer"><a class="header" href="#disclaimer">Disclaimer</a></h2>
 <p>Please note that all efforts are made on a best-effort basis. Neither TFTech nor TFCloud assumes responsibility for any of the code, communication, or information distribution.</p>
 <h2 id="support"><a class="header" href="#support">Support</a></h2>
-<p>For support inquiries, please reach out to TFTech. They can provide a license and support agreement as needed.</p>
+<p>For support inquiries, please reach out to <a href="https://github.com/threefoldtech">TFTech</a>. They can provide a license and support agreement as needed.</p>
 
                     </main>
 
@@ -241,6 +241,22 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 
