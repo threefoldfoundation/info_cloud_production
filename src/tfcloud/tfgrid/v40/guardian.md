@@ -22,7 +22,7 @@ and upgrade your validator starting from code.
 
 What do you get in return
 
-* Eternal recognition from your Regional Internet community (-: 
-* TBDk USD per month in INCA reward
+* Eternal recognition from your Regional Internet community 
+* TBDk USD per month in TFT reward.
 
 
