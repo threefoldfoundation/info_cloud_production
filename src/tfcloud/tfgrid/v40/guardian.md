@@ -26,10 +26,3 @@ What do you get in return
 * TBDk USD per month in INCA reward
 
 
-### INCA Reward
-
-INCA stands for INternet CApacity, is a sort of IOU between TFCloud and the owner of the INCA Token.
-
-The Guardian will receive the INCA Token and TFCloud is obliged to fulfil the obligations as set in the INCA token metadata (the payment).
-
-For the curious you can see the architecture of how an INCA 3script representation looks like [here](inca_3script_example.md)
