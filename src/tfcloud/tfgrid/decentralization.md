@@ -20,7 +20,7 @@ Decentralization, in our view, isn't solely about employing blockchain technolog
 | Description                                                      | Good Enough (1) | Remark                                                                                                |
 | ---------------------------------------------------------- | --------------- | ----------------------------------------------------------------------------------------------------- |
 | 3Nodes owned and invested by Independent Farmers           | Yes             | less than 10% owned by ThreeFold Cloud/Dubai                                                          |
-| open documentation & feedback                              | Yes             | all opensource on github, anyone can contribute and give feedback, whcih does happen quite well       |
+| open documentation & feedback                              | Yes             | all opensource on github, anyone can contribute and give feedback, which does happen quite well       |
 | transparancy and input on any change to do with tokenomics | Yes             | see the discussions on forum (3) and GEP's process                                                    |
 | transparancy about tokens, history                         | Yes             | see wiki (2) which is also on github, a lot of info
 | TFChain deployment                                         | No              | too few run the validator stack, we need more validators                                              |
