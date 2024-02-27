@@ -2,7 +2,7 @@
 
 <h2>Table of Contents</h2>
 
-- [Our Forum, Our Home](#our-forum-our-home)
+- [Our Ecosystem, Our Home](#our-ecosystem-our-home)
 - [Safety First](#safety-first)
 - [Real Identities](#real-identities)
 - [We're Human](#were-human)
@@ -12,12 +12,15 @@
 - [Concentration on Relevance](#concentration-on-relevance)
 - [Right of Admission Reserved](#right-of-admission-reserved)
 - [Role of Moderators](#role-of-moderators)
+- [Disclaimer](#disclaimer)
 
 ***
 
-## Our Forum, Our Home
+## Our Ecosystem, Our Home
 
-Think of this forum as our virtual home. We've opened our doors to guests so we can gather and discuss our shared passion: the decentralized project, ThreeFold. Just as in any home, we have certain expectations about behavior and respect.
+Think of the TFCloud community and ecosystem as our virtual home. We've opened our doors to guests so we can gather and discuss our shared passion: the decentralized project, ThreeFold. Just as in any home, we have certain expectations about behavior and respect. 
+
+> Note: This applies to the ThreeFold Forum and also to all communication aspects of TFCloud and TFTech. Read the [TF Resources page](./tfcloud_resources.md) for more information.
 
 ## Safety First
 
@@ -75,3 +78,7 @@ Their responsibilities include:
 - Taking action against participants who consistently breach our code of conduct.
 
 Remember, this forum operates under the umbrella of ThreeFold Cloud, a Dubai-based company. While our primary objective is to champion the ThreeFold Grid—a decentralized technology platform—ThreeFold Cloud also has a commercial mission: to offer professional, well-managed solutions atop the TFGrid.
+
+## Disclaimer
+
+Please note that all efforts are made on a best-effort basis. Neither TFTech nor TFCloud assumes responsibility for any of the code, communication, or information distribution.
