@@ -1,0 +1,18 @@
+[book]
+title = "ThreeFold Cloud Internal"
+
+[output.html.fold]
+enable = true
+level = 0
+
+[output.html]
+no-section-label = true
+additional-js = ["mermaid.min.js", "mermaid-init.js"]
+
+[output.html.print]
+enable = true
+
+[preprocessor]
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"

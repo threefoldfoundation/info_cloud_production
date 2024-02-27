@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Code of Conduct - ThreeFold Cloud</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../../tfcloud/intro/intro.html">Introduction</a></li><li class="chapter-item "><a href="../../tfcloud/cloud_features/products.html">Products</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tfcloud/cloud_features/planned_products.html">Planned Products</a></li><li class="chapter-item "><a href="../../tfcloud/cloud_features/features.html">Features</a></li><li class="chapter-item "><a href="../../tfcloud/cloud_features/values.html">Values</a></li><li class="chapter-item "><a href="../../tfcloud/cloud_features/autonomous_it.html">Autonomous IT</a></li></ol></li><li class="chapter-item "><a href="../../tfcloud/tfgrid/tfgrid.html">Open-Source TFGrid</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tfcloud/tfgrid/opensource_movement.html">Open-Source Movement</a></li><li class="chapter-item "><a href="../../tfcloud/tfgrid/v40/40.html">TFGrid 4.0</a></li><li class="chapter-item "><a href="../../tfcloud/tfgrid/v40/alltrust.html">All Trust</a></li><li class="chapter-item "><a href="../../tfcloud/tfgrid/decentralization.html">Decentralization</a></li><li class="chapter-item "><a href="../../tfcloud/tfgrid/v40/guardian.html">Guardians</a></li><li class="chapter-item "><a href="../../tfcloud/tfgrid/tokenomics_tfgrid.html">Tokenomics</a></li><li class="chapter-item "><a href="../../tfcloud/tfgrid/roadmap_tfgrid.html">Roadmap</a></li></ol></li><li class="chapter-item "><a href="../../tfcloud/mycelium/mycelium.html">Mycelium</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tfcloud/mycelium/mycelium_platform.html">Mycelium Platform</a></li><li class="chapter-item "><a href="../../tfcloud/mycelium/mycelium_roadmap.html">Roadmap Mycelium</a></li><li class="chapter-item "><a href="../../tfcloud/mycelium/mycelium_components.html">Components</a></li><li class="chapter-item "><a href="../../tfcloud/mycelium/mycelium_faq.html">FAQ</a></li></ol></li><li class="chapter-item "><a href="../../tfcloud/techvision/tfcloud_vision.html">Vision</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tfcloud/techvision/technology.html">Technology</a></li><li class="chapter-item "><a href="../../tfcloud/techvision/tfcloud_benefits.html">Benefits</a></li><li class="chapter-item "><a href="../../tfcloud/techvision/tfcloud_qss.html">Quantum Safe Storage</a></li><li class="chapter-item "><a href="../../tfcloud/techvision/tfcloud_components.html">Components</a></li></ol></li><li class="chapter-item "><a href="../../tfcloud/ourworld/ourworld_venture_creator.html">OurWorld Venture Creator</a></li><li class="chapter-item expanded "><a href="../../tfcloud/community/collaboration.html">Collaboration</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tfcloud/community/tfcloud_resources.html">TFCloud Resources</a></li><li class="chapter-item expanded "><a href="../../tfcloud/community/code_conduct.html" class="active">Code of Conduct</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">ThreeFold Cloud</h1>
+
+                    <div class="right-buttons">
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="code-of-conduct"><a class="header" href="#code-of-conduct"> Code of Conduct</a></h1>
+<h2 id="table-of-contents"><a class="header" href="#table-of-contents">Table of Contents</a></h2>
+<ul>
+<li><a href="#our-forum-our-home">Our Forum, Our Home</a></li>
+<li><a href="#safety-first">Safety First</a></li>
+<li><a href="#real-identities">Real Identities</a></li>
+<li><a href="#were-human">We're Human</a></li>
+<li><a href="#purpose-over-process-decentralization-is-not-a-purpose-by-itself">Purpose Over Process, Decentralization is not a purpose by itself</a></li>
+<li><a href="#embrace-positivity-and-shared-growth">Embrace Positivity and Shared Growth</a></li>
+<li><a href="#content-guidelines">Content Guidelines</a></li>
+<li><a href="#concentration-on-relevance">Concentration on Relevance</a></li>
+<li><a href="#right-of-admission-reserved">Right of Admission Reserved</a></li>
+<li><a href="#role-of-moderators">Role of Moderators</a></li>
+</ul>
+<hr />
+<h2 id="our-forum-our-home"><a class="header" href="#our-forum-our-home">Our Forum, Our Home</a></h2>
+<p>Think of this forum as our virtual home. We've opened our doors to guests so we can gather and discuss our shared passion: the decentralized project, ThreeFold. Just as in any home, we have certain expectations about behavior and respect.</p>
+<h2 id="safety-first"><a class="header" href="#safety-first">Safety First</a></h2>
+<p>Our primary goal is to create a space where everyone feels safe and respected. Personal attacks, harassment, and any form of discrimination will not be tolerated.</p>
+<h2 id="real-identities"><a class="header" href="#real-identities">Real Identities</a></h2>
+<p>Anonymity can sometimes lead to harmful behavior. To foster trust and accountability in our community, users must not use pseudonyms or fake profiles. Stand by your words with your real identity. </p>
+<h2 id="were-human"><a class="header" href="#were-human">We're Human</a></h2>
+<p>Remember, we're all human. We'll make mistakes, have our biases, and sometimes get things wrong. 
+This is our forum, and while we strive for fairness and accuracy, we won't always be perfect, and we expect no-one to be.</p>
+<h2 id="purpose-over-process-decentralization-is-not-a-purpose-by-itself"><a class="header" href="#purpose-over-process-decentralization-is-not-a-purpose-by-itself">Purpose Over Process, Decentralization is not a purpose by itself</a></h2>
+<p>While decentralization can have its benefits, it's not our main goal. Our focus is on meaningful discussions, fostering community, and ensuring a respectful environment.</p>
+<h2 id="embrace-positivity-and-shared-growth"><a class="header" href="#embrace-positivity-and-shared-growth">Embrace Positivity and Shared Growth</a></h2>
+<p>We deeply value the energy and spirit our community members bring. We believe in the beauty of what we create together, rooted in the fundamental principle that everyone joins our forum with good intentions. By fostering a culture of sharing — our knowledge, experiences, and aspirations — we create a cycle of giving and receiving. It's this mutual respect and belief in collective growth that propels us forward. We kindly ask all members to contribute with a positive energy, recognizing the potential and goodness in every conversation.</p>
+<h2 id="content-guidelines"><a class="header" href="#content-guidelines">Content Guidelines</a></h2>
+<ul>
+<li>
+<p><strong>Cryptocurrency Discussions</strong>: We are not a cryptocurrency-centric project. Please avoid discussions about token valuations, trading, or any other crypto-related activities. We aim to focus on our core values and mission, rather than market dynamics or speculative behaviors.</p>
+</li>
+<li>
+<p><strong>Spirituality and Religion</strong>: This forum is not a platform for spiritual or religious discussions. While we respect individual beliefs, we request participants to refrain from introducing such topics here.</p>
+</li>
+<li>
+<p><strong>Legality</strong>: Posts promoting or discussing illegal activities, according to any jurisdiction, are strictly prohibited and will be removed.</p>
+</li>
+</ul>
+<h2 id="concentration-on-relevance"><a class="header" href="#concentration-on-relevance">Concentration on Relevance</a></h2>
+<p>Our responses are crafted not just for the sake of speaking, but to genuinely address the essence of a forum thread. We prioritize adding content that directly pertains to the topic at hand. Linking to other forum posts is reserved for when it's truly pertinent, and we avoid diverting one thread's focus to champion another.</p>
+<p>We love the less is more concept, less words, more impact.</p>
+<h2 id="right-of-admission-reserved"><a class="header" href="#right-of-admission-reserved">Right of Admission Reserved</a></h2>
+<p>As hosts, we reserve the right to remove anyone or any content from this forum if we believe they are not aligned with the values and guidelines set forth above.</p>
+<blockquote>
+<p>Thank you for respecting these guidelines and ensuring our forum remains a constructive and positive space for all.</p>
+</blockquote>
+<h2 id="role-of-moderators"><a class="header" href="#role-of-moderators">Role of Moderators</a></h2>
+<p>Our forum moderators are instrumental in upholding the values outlined above. They, like all of us, are human and may err from time to time. We ask for understanding and appreciation for their efforts and dedication.</p>
+<p>Their responsibilities include:</p>
+<ul>
+<li>Enhancing our communication and collaboration.</li>
+<li>Upholding a positive forum atmosphere.</li>
+<li>Removing off-topic or malicious posts.</li>
+<li>Deleting content that contradicts the guidelines stated above.</li>
+<li>Taking action against participants who consistently breach our code of conduct.</li>
+</ul>
+<p>Remember, this forum operates under the umbrella of ThreeFold Cloud, a Dubai-based company. While our primary objective is to champion the ThreeFold Grid—a decentralized technology platform—ThreeFold Cloud also has a commercial mission: to offer professional, well-managed solutions atop the TFGrid.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../tfcloud/community/tfcloud_resources.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../tfcloud/community/tfcloud_resources.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../../mermaid.min.js"></script>
+        <script src="../../mermaid-init.js"></script>
+
+
+    </div>
+    </body>
+</html>
